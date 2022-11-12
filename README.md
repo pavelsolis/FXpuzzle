@@ -2,8 +2,6 @@
 
 by Pavel Solís (pavel.solis@gmail.com)
 
-The files in this folder replicate the results in the paper.
-
 
 ## System Features
 The results in the paper were generated using the following:
@@ -30,12 +28,12 @@ README.md (this file)
 
 ## Dataset
 With the following exceptions, the variables in the dataset represent (percent) changes (\* is a wildcard):
-- date* contain dates
-- idx*, regular and usjobsday are binary variables
+- date\* contain dates
+- idx\*, regular and usjobsday are binary variables
 - levelwti reports end-of-day values
 
 The following variables report intraday (percent) changes in 30-min windows:
-- gmxn*yr, mpsw28t, mpswc, trm*, usdmxn
+- gmxn\*yr, mpsw28t, mpswc, trm\*, usdmxn
 
 Some variables use the following suffixes:
 - _ttwd for intraday (percent) changes in 50-min windows
