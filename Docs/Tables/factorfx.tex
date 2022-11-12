@@ -1,0 +1,30 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[labelsep=period,labelfont=bf]{caption}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{threeparttable}
+\usepackage{pdflscape}
+\usepackage{tabularx}
+\usepackage{afterpage}
+\usepackage[margin=1in]{geometry}
+\input{../Settings/macros_global}			   % Personalized commands
+\input{../Settings/macros_local}			    % Personalized commands
+%\pagestyle{empty}
+
+\begin{document}
+%	\afterpage{
+		\begin{normalsize}
+%			\begin{landscape}
+				\begin{table}[t!]
+					\begin{center}
+						\caption{The Response of the Exchange Rate to Policy Rate Surprises} \label{tab:factorfx} %: Intraday Data
+						\begin{threeparttable}
+							\estauto{../Tables/f_factorfx.tex}{4}
+							\tabnote{This table shows the coefficient estimates in regressions of exchange rate (FX) returns on \textchange{policy rate surprises (PRS)}. The returns are calculated using \textit{intraday} data in the first two columns and  \textit{daily} data in the last two. \textchange{The surprises are calculated using \textit{intraday} data in the top row and \textit{daily} data in the bottom row.} Daily changes are calculated around monetary policy announcements; intraday changes are calculated from 10 minutes before to 20 minutes after an announcement. The sample includes all regular monetary policy announcements from January 2011 to \lastobsfx. Figures are expressed in basis points. No constant is included in the regressions. \textchange{Heteroskedasticity-robust} standard errors are shown in parentheses. *, **, *** asterisks respectively indicate significance at the 10\%, 5\% and 1\% level.}
+						\end{threeparttable}
+					\end{center}
+				\end{table}
+%			\end{landscape}
+		\end{normalsize}
+%	}
+\end{document}

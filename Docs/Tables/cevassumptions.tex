@@ -1,0 +1,123 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[labelsep=period,labelfont=bf]{caption}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{threeparttable}
+\usepackage{pdflscape}
+\input{../Settings/macros_global}			   % Personalized commands
+\input{../Settings/macros_local}			    % Personalized commands
+%\pagestyle{empty}
+
+\begin{document}
+	\newcolumntype{Y}{>{\centering\arraybackslash}X}
+%	\begin{landscape}
+	\begin{footnotesize}
+		\begin{table}[t]
+			\centering
+			\begin{threeparttable}
+				\caption{Assessment of Assumptions in Classical Measurement Error Models}
+				\label{tab:cevassumptions}
+				\begin{tabularx}{\textwidth}{cYYY}
+					\toprule
+					Measurement error in & Assumptions & Data & \(p\)-value \\
+					\midrule
+					\multirow{3}{*}{Dependent variable only} & \(\covar_{\merhs} = 0\) & \(1.86\) &  \\
+					& \(\corrVX = 0\) & \(0.16\) & \(0.149\) \\
+					& \(\corrVY = 0\) & \(-0.08\) & \(0.444\) \\
+					\midrule %\cmidrule(lr){1-4}
+					\multirow{3}{*}{Independent variable only} & \(\covar_{\melhs} = 0\) & \(62.18\)  &  \\
+					& \(\corrUX = 0\) & \(-0.01\) & \(0.958\) \\
+					& \(\corrUY = 0\) & \(0.08\) & \(0.474\) \\
+					\midrule
+					 & \(0 < \attnfactor < 1\) & \(0.944\) & \\
+					\bottomrule
+				\end{tabularx}
+				\begin{tablenotes}[para,flushleft]
+					\footnotesize \textit{Notes:} This table compares the assumptions in classical measurement error models against the data. Measurement errors are calculated as the difference between daily and intraday changes in the variables. \(\covar_{i}\), \(\var_{i}\) and \(\corr_{ij}\) respectively denote the standard deviation and variance of variable \(i\), and the correlation between variables \(i\) and \(j\). Although the assumptions in the models are expressed in terms of covariances, this table reports correlations. 
+					The last column tests the null hypothesis of zero correlation. The attenuation factor is calculated according to \(\eqAttenInLine\), where \(\covar_{\idvstar} = 7.64\). 
+					The sample includes all regular monetary policy announcements from January 2011 to \lastobsfx.
+				\end{tablenotes}
+			\end{threeparttable}
+		\end{table}
+	\end{footnotesize}
+%	\end{landscape}
+\end{document}
+
+%lambda = s2x*/(s2x* + s2u) = (7.63747^2)/(1.860757^2+7.63747^2) = 0.9439678251
+%lambda = s2x*/s2x = 7.63747^2/7.850536^2 = 0.9464559716
+
+%        c1      c2
+%r1   1.861       .
+%r2   0.157   0.149
+%r3  -0.084   0.444
+%r4  62.127       .
+%r5  -0.006   0.958
+%r6   0.078   0.474
+%r7   0.944       .
+%
+%. di lambda2
+%.94645609
+%
+%. 
+%. * Summary
+%. summ merhs melhsfx mpswc mpswc_ttdm if idx11 & regular
+%
+%Variable |        Obs        Mean    Std. dev.       Min        Max
+%-------------+---------------------------------------------------------
+%merhs |         		86   -.0526744    1.860757       -5.5        5.5
+%melhsfx |         		86   -5.605278    62.12722  -152.9995   138.9821
+%mpswc |         		86   -.3236047     7.63747      -45.8         16
+%mpswc_ttdm |       86   -.3762791    7.850536      -45.8       18.5
+%
+%. pwcorr melhsfx merhs mpswc usdmxn if idx11 & regular, sig
+%
+%|  melhsfx    merhs    mpswc   usdmxn
+%-------------+------------------------------------
+%melhsfx |   1.0000 
+%|
+%|
+%merhs |   0.0860   1.0000 
+%|   0.4311
+%|
+%mpswc |   0.1568  -0.0057   1.0000 
+%|   0.1494   0.9583
+%|
+%usdmxn |  -0.0836   0.0782  -0.5027   1.0000 
+%|   0.4439   0.4743   0.0000
+%|
+%
+%. 
+%. * Correlations (footnotes in appendix D)
+%. pwcorr merhs melhsfx mpswc_ttdm if idx11 & regular, sig
+%
+%|    merhs  melhsfx mpswc_~m
+%-------------+---------------------------
+%merhs |   1.0000 
+%|
+%|
+%melhsfx |   0.0860   1.0000 
+%|   0.4311
+%|
+%mpswc_ttdm |   0.2315   0.1729   1.0000 
+%|   0.0320   0.1114
+%|
+%
+%.         // No correlation between ME's
+%.         // ME on RHS correlates w/ RHS variable measured w/ error -> in line 
+%> with CEV assumption
+%.         // ME on LHS does not correlate w/ RHS variable measured w/ error -> 
+%> no endogeneity bias
+%. 
+%. * H0's not rejected (footnote)
+%. *       H0: mean_u = 0 vs. H1: mean_u != 0
+%. *       H0: mean_v = 0 vs. H1: mean_v != 0
+%. quiet ttest merhs == 0
+%
+%. di r(p)
+%.33589461
+%
+%. quiet ttest melhsfx == 0
+%
+%. di r(p)
+%.56800417

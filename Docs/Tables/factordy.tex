@@ -1,0 +1,30 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[labelsep=period,labelfont=bf]{caption}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{threeparttable}
+\usepackage{pdflscape}
+\usepackage{tabularx}
+\usepackage{afterpage}
+\usepackage[margin=1in]{geometry}
+\input{../Settings/macros_global}			   % Personalized commands
+\input{../Settings/macros_local}			    % Personalized commands
+%\pagestyle{empty}
+
+\begin{document}
+%	\afterpage{
+		\begin{normalsize}
+			\begin{landscape}
+				\begin{table}[t]
+					\begin{center}
+						\caption{The Response of Asset Prices to Policy Rate Surprises: Daily Data} \label{tab:factordy} %: Daily Data
+						\begin{threeparttable}
+							\estauto{../Tables/f_factordy.tex}{10}
+							\tabnote{This table shows the coefficient estimates in regressions of daily yield changes or exchange rate (FX) returns on daily changes in the 3-month swap rate (PR surprise). Daily changes are calculated around monetary policy announcements. The first column for each dependent variable uses the same sample period as Table \ref{tab:factorid}; that is, the sample includes all regular monetary policy announcements starting on January 2011 for the exchange rate, on January 2013 for 2- 10- and 30-year yields, and on December 2014 for 5-year yields. The second column for each dependent variable uses a larger sample size, including all regular monetary policy announcements starting on January 2004. The sample ends on \lastobsfx{} in all cases. All variables are expressed in basis points. No constant is included in the regressions. \textchange{Heteroskedasticity-robust} standard errors are shown in parentheses. *, **, *** asterisks respectively indicate significance at the 10\%, 5\% and 1\% level.}
+						\end{threeparttable}
+					\end{center}
+				\end{table}
+			\end{landscape}
+		\end{normalsize}
+%	}
+\end{document}

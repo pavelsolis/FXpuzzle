@@ -1,0 +1,224 @@
+\titleformat{\section}{\large\bfseries}{}{0pt}{\thesection.\quad}
+
+\section{INTRODUCTION}
+\sectitlespace
+
+The exchange rate response to monetary policy in emerging markets is an open question. Standard open economy models suggest that an increase in the policy rate leads to an immediate appreciation of the currency \parencite{Dornbusch:1976}. Contrary to this prediction, early evidence for advanced economies \parencite{GrilliRoubini:1995} found that contractionary monetary policy leads to a currency depreciation, which was referred to as the exchange rate puzzle. This puzzle owes to the assumptions made to identify the monetary policy surprises, giving rise to a problem of reverse causality \parencite{Zettelmeyer:2004}.\footnote{The traditional approach to identify monetary policy surprises is to estimate a vector autoregression model using a recursive assumption, see \textcite{CEE:1999}. The exchange rate puzzle is a well-known feature of this approach. \textcite{KimLim:2016} find similar results for emerging markets.} Event studies with high-frequency data identify exogenous changes in the policy rate and show that a tightening indeed leads to an appreciation of the currencies of advanced economies; this effect is detected using intraday \parencite{ABDV:2003,KearnsManners:2006,FRWW:2007} and daily \parencite{Wright:2012, FerrariKearnsSchrimpf:2021} event windows, and even exhibits persistence over subsequent days \parencite{Rosa:2011JBF, FerrariKearnsSchrimpf:2021}. For emerging markets, however, event studies with \textit{daily} data show that the currency response to monetary policy is low or nonexistent \parencite{Aktasetal:2009, Duranetal:2012,PenningsRamayandiTang:2015}. \textcite{Kohlscheen:2014} identifies this as an exchange rate puzzle in emerging markets. 
+
+The null or weak response of the currency to monetary policy in emerging markets reported in the literature (the puzzle) raises the question of whether their central banks actually exert an influence on their own currencies. The question is relevant for three reasons. First, the transmission of monetary policy via the exchange rate is vital for open economies. Second, the sensitivity of the currencies of advanced economies to monetary policy increased after the global financial crisis \parencite{FerrariKearnsSchrimpf:2021}, even in countries who continued to use conventional tools---like Australia and Canada---and so it would be striking if emerging market currencies remain insensitive to monetary policy. Third, the currencies of emerging markets do respond to \textit{foreign} monetary policy surprises \parencite{HausmanWongswan:2011,KearnsSchrimpfXia:2018}.
+
+This paper studies whether and how the exchange rate responds to monetary policy in a representative emerging economy. I use an event study methodology and a new dataset of intraday changes in asset prices bracketing all regular monetary policy announcements in Mexico from 2011 to 2021. 
+Mexico is a small open economy with relatively liquid financial markets, a market-based exchange rate, and a credible inflation targeting regime, criteria that make it a reasonable candidate for this type of analysis \parencite{KearnsManners:2006,PenningsRamayandiTang:2015}. By now, event studies with high-frequency data are a well-established strategy in macro-finance to overcome endogeneity concerns because they isolate the surprise component of policy decisions \parencite{GurkaynakWright:2013,NakamuraSteinsson:2018JEP}. Nevertheless, they have rarely been applied to study the transmission of monetary policy to asset prices in Mexico.\footnote{ For the Mexican case, event studies have been used to analyze the effects of \textit{foreign} monetary policy on asset prices \parencite{BZP:2001,Rosa:2011Eco,HausmanWongswan:2011,KearnsSchrimpfXia:2018} and portfolio flows \parencite{HernandezVega:2021}, and whether inflation expectations are well-anchored \parencite{DePooter_etal:2014}. \textcite{Kohlscheen:2014} includes Mexico to study the exchange rate response to monetary policy, but does not use intraday data nor swaps to measure surprises in the policy rate as in this paper.} 
+
+The exchange rate responds significantly to policy rate surprises in Mexico. An unanticipated increase in the policy rate appreciates the currency. A 25-basis-point increase in the rate leads to an appreciation of about 55 basis points. This provides evidence against the exchange rate puzzle in emerging markets, their currencies are thus no different to those in advanced economies in terms of their responsiveness to the domestic policy rate.\footnote{An early interpretation of the exchange rate puzzle is that countries fear large currency fluctuations \parencite{CalvoReinhart:2002}. Because of this `fear of floating', the central bank would adjust its policies to keep the currency from experiencing large swings. This phenomenon, however, is unrelated to the question of whether a surprise change in the policy rate affects the currency. In fact, by focusing on the effects of policy rate surprises, this paper is neutral on how monetary policy expectations are determined.} For comparison purposes, the effects of monetary policy are also assessed on the yield curve. In line with the evidence for advanced economies, a contractionary monetary policy raises bond yields flattening the yield curve.\footnote{A 25-basis-point policy rate hike reduces the spread between 10- and 2-year yields by 6 basis points.} 
+
+The main contribution of the paper, however, is to solve the exchange rate puzzle in emerging markets identified by \textcite{Kohlscheen:2014}. In event studies with \textit{daily} data, he shows that the emerging market currencies do not respond to monetary policy. The currencies of advanced economies, in contrast, react to monetary policy even using daily data, although the precision decreases relative to intraday data \parencite{Wright:2012, FerrariKearnsSchrimpf:2021}. To understand the puzzle, I compare the response of the exchange rate using intraday and daily event windows in a validation study \parencite{Boundetal:1994}. To the best of my knowledge, this is the first paper highlighting the differences between intraday and daily changes in asset prices to study the effects of monetary policy in emerging markets. The analysis reveals that the exchange rate response is sensitive to data frequency as it can only be perceived using intraday data. This sensitivity, however, is characteristic of the exchange rate since the effect on the yield curve can still be observed with daily data. 
+
+The puzzle is the result of wide event windows when computing exchange rate returns, rather than noisy measurement of monetary policy surprises as suggested by \textcite{PenningsRamayandiTang:2015}. Moreover, noise in daily exchange rate returns gives rise to a bias that declines after controlling for potential omitted variables. Intuitively, a lot of factors other than monetary policy affect the exchange rate in emerging markets that even a daily frequency is not enough to prevent their influence. Future research on emerging market currencies can collect intraday data---at least for the exchange rate---to avoid this problem. 
+
+The paper proceeds as follows. Section \ref{sec:mpsidentification} describes how policy rate surprises are measured. Section \ref{sec:policyrate} discusses their effects on the currency. Section \ref{sec:puzzle} addresses the exchange rate puzzle in emerging markets. The last section concludes.
+
+\sectitlespace
+\section{IDENTIFICATION OF POLICY RATE SURPRISES} \label{sec:mpsidentification}
+\sectitlespace
+
+This section briefly reviews the institutional developments in Mexico that are relevant for the identification of policy rate surprises, and describes how to measure them. 
+
+\sectitlespace
+\subsection{Monetary Policy in Mexico}
+\sectitlespace
+The Bank of Mexico, also known as Banxico, is an independent central bank that formally adopted inflation targeting in 2001. The official target is 3\% with a range of \(\pm\) 1\%. 
+
+Banxico has made some relevant institutional changes. Since 2003, it follows a calendar of monetary policy meetings that is publicly announced ahead of time. Due to convergence of inflation to the target, it progressively reduced the number of regularly-scheduled meetings per year from 23 between 2003 and 2005 to 12 in 2006 and 2007, 11 between 2008 and 2010, and 8 since 2011. The transition period for the adoption of its current monetary policy instrument, the overnight interbank interest rate, started in 2004 and concluded in 2008.\footnote{Before 2008, Banxico conducted monetary policy by setting a target for reserves (known as `el corto') and monetary conditions. \textcite{SidaouiRF:2008} review the transmission of monetary policy in Mexico since the 1994-95 currency crisis until the adoption of the current policy rate.} Finally, the timing of the announcements changed in 2015; up until 2014, announcements were made at 9 a.m. local time, usually on Fridays, but since 2015 announcements are now made at 1 p.m. local time, usually on Thursdays. 
+
+The regularity and scheduled timing of the announcements allow me to study the effects of policy decisions on asset prices using an event study methodology. Appendix \ref{sec:calendar} contains the dates and times of Banxico's monetary policy announcements since 2004, along with relevant economic data from Mexico and the U.S. released on the same days. Between January 2004 and \lastobsfx, there were 189 regularly-scheduled monetary policy announcements, 86 of which happened since 2011.\footnote{Banxico made unscheduled announcements on April 2004, February 2016, and March and April 2020. Appendix \ref{sec:exclusions} explains the reasons for excluding those meetings from the analysis.} 
+
+\sectitlespace
+\subsubsection{Timing of the Announcements} \label{sec:mptiming}
+\sectitlespace
+
+To correctly measure surprises in the policy rate with intraday data, it is crucial to have the \textit{time} of the announcements right, which requires to consider both the change in the timing of the announcements in 2015 and the differences in the usage of Daylight Saving Time (DST) between Mexico and the U.S.
+
+The two relevant times for Banxico's announcements are 9 a.m. up until 2014 and 1 p.m. afterwards, both expressed in the Central Time zone used in Mexico's capital. The data, however, is recorded in the Eastern Time (ET) zone used in the U.S. capital. The time zone matters because the usual one-hour time difference between the two cities widens to two hours during non-overlapping DST days since 2007, when the U.S. extended its usage of DST time, but not Mexico. Before 2007, all announcements happened at 10 a.m. ET. They usually took place at 10 a.m. ET between 2007 and 2014, and at 2 p.m. ET since 2015, except on non-overlapping DST days, in which they occurred at 11 a.m. ET and at 3 p.m. ET, respectively. 
+Further details are in Appendix \ref{sec:calendar}.
+
+\sectitlespace
+\subsection{Measuring Policy Rate Surprises} \label{sec:prs}
+\sectitlespace
+
+This paper uses swap rates to measure surprises in the policy rate. Although an overnight indexed swap (OIS) referencing the policy rate would be an ideal instrument,\footnote{ As an alternative to the U.S.-specific futures contracts of the policy rate, \textcite{Lloyd:2018a} shows that OIS can be used to measure monetary policy surprises in the U.S. itself, Germany, Japan and the U.K.} the swap market in Mexico references an interbank interest rate that closely follows the policy rate, the 28-day interbank interest rate (\tiie).\footnote{The average spread between the \tiie{} and the policy rate is around 30 basis points and exhibits small variations, so it essentially cancels out when computing changes in swap rates.} The \tiie{} is denominated in local currency and is the benchmark rate for banking loans in Mexico. The most liquid swap referencing the \tiie{}, and indeed the main local derivative, is the 3-month swap. Importantly, while Banxico calculates the \tiie{} once a day (based on quotes it receives from commercial banks), the 3-month swap trades within the day, which is needed to calculate changes in the swap rate in intraday windows.\footnote{Appendix \ref{sec:tiie} discusses relevant considerations if the \tiie{} were to be used to measure the surprises.} 
+
+The policy rate surprises in this paper are equal to the change in the 3-month swap rate around windows containing monetary policy announcements. In principle, changes in the 3-month swap rate may capture surprises not only about the current level of the policy rate---the variable of interest---but also about its future path, given that the contract may cover more than one policy meeting ahead. An alternative measure, used by \textcite{DePooter_etal:2014}, is the difference between the actual policy rate change and the average of survey expectations reported by Bloomberg. The correlation between the market-based and the survey-based measures is slightly above 0.9. In addition, a 1-month swap referencing the \tiie{} trades in the market and arguably does not capture surprises about the future path of the policy rate, but it has a shorter history and is less liquid. The correlation between the daily changes in the 1- and 3-month swap rates is 0.7. Lastly, \textcite{Solis:2F} shows that changes in the 1-year swap that are uncorrelated to changes in the 3-month swap nicely align with surprises about the future path of the policy rate communicated by Banxico via statements. Therefore, even though the 3-month swap might encompass more than one policy meeting ahead, changes in its rate adequately capture the monetary stance in the short run. A positive value represents a tightening of the monetary stance, and a negative value represents an easing.\footnote{Leaving the policy rate unchanged can still be a surprise if market participants expected a move. For instance, a zero raw change can be an easing surprise if the market expected a 25-basis-point increase.} 
+
+Changes in the 3-month swap rate capture the shift in expectations for the policy rate around the announcements. Even though swap rates can be decomposed into an expectation for the policy rate and a risk premium,\footnote{A risk premium compensates investors in case their policy rate expectations turn out to be wrong.} the premium is not a problem to how the surprises are measured as long as it does not change over the length of the window, a reasonable assumption given that risk premia vary at business-cycle frequencies \parencite{PiazzesiSwanson:2008, GVRFSM:2019}.\footnote{ Also notice that the change in the swap rate differences out any constant risk premium.} In fact, \textcite{PiazzesiSwanson:2008} document that monetary policy surprises based on the \textit{change} in the derivative rate over small windows around the announcements are robust to the presence of risk premia. Moreover, \textcite{GVRFSM:2019} show that the risk premium in \tiie{} swap rates is relevant at medium but not at short horizons---the 3-month swap in particular.
+
+\sectitlespace
+\subsubsection{A Dataset of Asset Price Changes} \label{sec:dataset}
+\sectitlespace
+The preferred measure of policy rate surprises in this paper is the difference in the 3-month swap rate in 30-minute windows bracketing monetary policy announcements. The windows start 10 minutes before and end 20 minutes after each announcement. Differences over the same 30-minute windows are also calculated for the exchange rate (expressed in pesos per U.S. dollar) and for yields of bonds issued by the Mexican government with maturities of 2, 5, 10 and 30 years.\footnote{When no data is available at any of those times, the next available quote is used to compute the changes. In extreme cases, in which there are no quotes in wider windows for a day, the open and close quotes are used to compute the change in the rates; this only happens for the swap on a few days.} Changes in interest rates are calculated directly, while for the exchange rate, 100 times log differences are used to approximate the percentage change (or return) over the window. All changes are expressed in basis points. 
+
+The dataset also includes daily changes around the announcements for all the assets given that access to long spans of intraday data in emerging markets is not as common as for advanced economies. Comparing the results using intraday and daily data is key to address the exchange rate puzzle in emerging markets \parencite{Kohlscheen:2014} in section \ref{sec:puzzle}.
+
+All the data for the analysis come from Bloomberg. Intraday changes start in 2011 for the exchange rate and the 3-month swap, in 2013 for most bond yields, and in December 2014 for the 5-year yield. Daily changes start in October 2006 for the 30-year yield and in 2004 for all other assets.\footnote{Policy rate surprises with daily data can begin in 2004 (the start of the transition period for the adoption of the current policy tool) because the swaps reference the \tiie{} not the policy rate.} The sample ends on \lastobsfx. 
+
+Figure \ref{fig:prshocks} compares the raw changes in the policy rate and the policy rate surprises identified using intraday data. The difference between the two is the anticipated change in the policy rate. As is common with cleanly identified surprises \parencite{NakamuraSteinsson:2018JEP}, the policy rate surprises are small relative to the raw changes, which indicates that most of Banxico's policy rate decisions are anticipated by market participants. Like other central banks, Banxico works hard to communicate information to financial markets ahead of time so that, by the time of an announcement, most of it is already anticipated. 
+
+%\input{../Figures/prshocks}
+\begin{center}
+	[Insert Figure \ref{fig:prshocks} here.]
+\end{center}
+
+Table \ref{tab:prssumm} shows summary statistics for the intraday and daily changes in asset prices. 
+Several of the insights documented formally in the next two sections can already be seen in Table \ref{tab:prssumm}. There is no much difference between the policy rate surprises calculated using intraday and daily data. Changes in bond yields also have similar characteristics, although they vary slightly more with daily data. In contrast, the standard deviation of the exchange rate returns doubles when the frequency goes from intraday to daily.
+
+%\input{../Tables/prssumm}
+\begin{center}
+	[Insert Table \ref{tab:prssumm} here.]
+\end{center}
+
+\sectitlespace
+\section{THE IMPACT OF MONETARY POLICY ON THE EXCHANGE RATE} \label{sec:policyrate}
+\sectitlespace
+
+This section documents a statistically and economically significant response of the exchange rate to policy rate surprises. The response, however, is sensitive to the length of the event window. In contrast, bond yields respond regardless of the data frequency. 
+
+\sectitlespace
+\subsection{Methodology}
+\sectitlespace
+The analysis of the response of the exchange rate and bond yields to policy rate surprises uses the following event-study regression:
+\input{../Equations/nOneFac}	
+\noindent in which \(\depvar\) is the change in the variable of interest (exchange rate or bond yields) and \(\mps\) is the policy rate surprise (i.e. the change in the 3-month swap rate), both computed over the same window around monetary policy announcements. The error term \(\errorreg\) captures variations in the dependent variable unrelated to policy rate surprises.
+
+The parameter of interest in equation (\ref{eq:nOneFac}) is the slope coefficient \(\slopetrgt\), it measures the response of asset prices to policy rate surprises.\footnote{The intercept \(\intrcpt\) is generally dropped because asset prices are not expected to change when there is no surprise in the policy rate in small windows.} The classical assumption to identify \(\slopetrgt\) is that \(\errorreg\) is orthogonal to \(\mps\) or, equivalently, that \(\mps\) is exogenous. The frequency at which asset price changes are calculated is crucial to satisfy the exogeneity assumption. 
+
+It is reasonable to assume that surprises in the policy rate, captured by the \textit{intraday} change in the 3-month swap around announcements, are exogenous. It is unlikely that, during such small windows, other variables influence asset prices in a systematic fashion or that monetary policy reacts to events minutes before the announcements are released. One can thus give a causal interpretation from policy decisions to asset price changes. 
+
+Asset price changes start to capture `noise' if computed using wider windows. The wider the window, the larger the noise. For instance, the estimation of equation (\ref{eq:nOneFac}) using quarterly or monthly data is plagued with problems like simultaneity and omitted variables. Daily data mitigates them, but noise in such data can at times blur the relationship between the variables of interest, as discussed in section \ref{sec:puzzle}. 
+
+\sectitlespace
+\subsection{Results}
+\sectitlespace
+The dependent variable determines the sign of \(\slopetrgt\). For the exchange rate, the uncovered interest rate parity implies that the interest rate differential between Mexico and the U.S. should equal the expected change in the exchange rate. Other things equal, an interest rate increase in Mexico should lead to a contemporaneous appreciation of the peso, i.e. a fall in the exchange rate; thus, \(\slopetrgt\) is expected to be negative. For bond yields, \textcite{Kuttner:2001} shows that a monetary tightening leads to higher yields at all maturities due to upward expectations for the policy rate, so \(\slopetrgt\) is expected to be positive. 
+
+\sectitlespace
+\subsubsection{Intraday Data}
+\sectitlespace
+Table \ref{tab:factorid} reports the estimation of equation (\ref{eq:nOneFac}) using intraday data. The first column for each of the dependent variables reports the estimate of \(\slopetrgt\). In all cases, the estimates have the expected sign and are highly significant.
+
+%\input{../Tables/factorid}
+\begin{center}
+	[Insert Table \ref{tab:factorid} here.]
+\end{center}
+
+A contractionary monetary policy appreciates the currency. A 25-basis-point increase in the policy rate leads, on average, to an appreciation of the currency of about 55 basis points. For comparison, the currencies of advanced economies responded around two times the magnitude of the policy rate surprise before the global financial crisis \parencite{Rosa:2011JBF} and up to five times afterwards \parencite{Wright:2012,FerrariKearnsSchrimpf:2021}. Table \ref{tab:factorid} thus provides evidence against the exchange rate puzzle in emerging markets, their currencies are no different to those in advanced economies in how they respond to the policy rate.
+
+A contractionary monetary policy also flattens the yield curve. A 25-basis-point hike in the policy rate narrows the spread between the 10- and 2-year yields by 6 basis points.\footnote{A 1-basis-point policy rate hike reduces the spread by \(0.23\) basis points, with a 1\% significance level.} 
+Appendix \ref{sec:yieldcurve} discusses the response of the yield curve in detail. 
+
+In robustness checks, I re-estimate equation (\ref{eq:nOneFac}) using two alternative measures of policy rate surprises. The results using wider 50-minute windows (starting 20 minutes before and ending 30 minutes after each announcement) for the surprises are essentially the same as in Table \ref{tab:factorid}. The signs and statistical significance using the survey-based surprises from section \ref{sec:prs} remain in all cases, although the magnitude decreases somewhat. 
+
+The second column for each dependent variable in Table \ref{tab:factorid} reports the responses to the two components of the raw changes in the policy rate, the anticipated and unanticipated parts.\footnote{The expected part is the difference between the raw change and the surprise in the policy rate.} Asset prices in Mexico do not respond to the anticipated changes.\footnote{The statistically significant effect of the anticipated part on the 30-year yield is economically small.} In fact, one would incorrectly conclude that monetary policy has no effect on the currency nor on the yield curve if raw changes were used instead of the surprises.\footnote{In unreported regressions of intraday asset price changes on raw changes in the policy rate, the slope coefficient is not significant. These regressions suffer from an error-in-variables problem because the raw change is a noisy measure of the surprise component, which leads to attenuation bias \parencite{Kuttner:2001}.} 
+
+In summary, there is a statistically and economically significant response of the exchange rate and the yield curve to policy rate \textit{surprises}. 
+
+\sectitlespace
+\subsubsection{Daily Data}
+\sectitlespace
+Table \ref{tab:factordy} reports the estimation of equation (\ref{eq:nOneFac}) using daily, instead of intraday, data. Remember that daily data start earlier than intraday data. Thus, the first column for each dependent variable in Table \ref{tab:factordy} reports the results over the same sample period as in Table \ref{tab:factorid}, while the second column shows the results with a sample starting in 2004.
+
+%\input{../Tables/factordy}
+\begin{center}
+	[Insert Table \ref{tab:factordy} here.]
+\end{center}
+
+The major insight from comparing Tables \ref{tab:factorid} and \ref{tab:factordy} is that intraday data is key to identify the currency response to the policy rate. The first two columns of Table \ref{tab:factordy} illustrate the exchange rate puzzle identified by \textcite{Kohlscheen:2014}; that is, emerging market currencies do not respond to policy rate surprises using daily event windows. In contrast, the effects on the yield curve are similar and still significant using daily data. 
+
+\sectitlespace
+\subsubsection{Persistence}
+\sectitlespace
+In addition to the initial reaction to the surprises, I assess the persistence of the response by estimating equation (\ref{eq:nOneFac}) but with the change in the dependent variable calculated days after an announcement. Specifically, I run the following local projections:
+\input{../Equations/nLP}
+\noindent in which \(\idxh\) indicates the horizon (in days) with \(\idxh = 0, 1, \ldots, 10\), and \(\mps\) represents the policy rate surprises identified using intraday data. The parameters of interest, \(\gamma_{\idxh}\), measure the average response of asset prices to policy rate surprises at horizon \(\idxh\). Responses are assessed relative to a one-basis-point increase (a tightening) in the policy rate. 
+
+%\input{../Figures/persistprsfx}
+\begin{center}
+	[Insert Figure \ref{fig:persistprsfx} here.]
+\end{center}
+
+Figure \ref{fig:persistprsfx} shows that there is no on-impact nor delayed response of the exchange rate to policy rate surprises. Since this exercise involves daily changes in asset prices, Figure \ref{fig:persistprsfx} illustrates the exchange rate puzzle in \textcite{Kohlscheen:2014} from a different angle since the currencies of advanced economies do exhibit persistence over subsequent days \parencite{Rosa:2011JBF, FerrariKearnsSchrimpf:2021}. Appendix \ref{sec:yieldcurve}, on the contrary, shows that policy rate surprises have a persistent effect on bond yields. 
+
+\sectitlespace
+\section{SOLVING THE KOHLSCHEEN (2014) PUZZLE} \label{sec:puzzle}
+\sectitlespace
+
+This section argues that the apparent lack of response of the exchange rate to monetary policy in Mexico illustrated in Table \ref{tab:factordy} is the result of wide event windows when computing exchange rate returns, giving rise to an omitted variable bias. 
+
+The key insight from comparing Tables \ref{tab:factorid} and \ref{tab:factordy} is that one reaches different conclusions about the response of the exchange rate depending on the data frequency used. With intraday data, the currency appreciates following a tightening, a response that is consistent with standard open economy models and with the evidence for advanced economies. In contrast, the currency does not respond to the policy rate when daily data is used. This phenomenon seems characteristic of emerging markets \parencite{Kohlscheen:2014} since the response of the currencies of advanced economies to the policy rate can still be seen with daily data and even exhibits persistence over subsequent days \parencite{Rosa:2011JBF,Wright:2012, FerrariKearnsSchrimpf:2021}. Intuitively, global financial variables, including monetary policy decisions in advanced economies, are key forces swaying international investors and financial markets \parencite{Rey:2013}, which may shorten the influence emerging market central banks have on their own currencies.\footnote{The response of the yield curve can also be seen with daily data (see Table \ref{tab:factordy}) and exhibits persistence over subsequent days too (see Figure \ref{fig:persistprsyc}), which likely reflects the role of local bond market investors.} 
+
+To understand the puzzle, I compare the response of the exchange rate using the two lengths for the event window, intraday and daily, in a validation study \parencite{Boundetal:1994}. Hereinafter, the exchange rate returns are the only dependent variable.
+
+\sectitlespace
+\subsection{Validation Study} \label{sec:validation}
+\sectitlespace
+It is helpful to approach the puzzle from an errors-in-variables perspective. In this sense, intraday changes in asset prices are treated as if they were the true surprises, whereas daily changes are seen as if they were the true surprises plus measurement error because they capture all news happening during a day, not just Banxico decisions. From this perspective, daily data involves measurement error in the dependent and independent variables. The purpose is to assess the role of each error in explaining the puzzle.
+
+Validation studies provide evidence on the magnitude of the measurement errors. In these studies, the `noisy' (daily) and `true' (intraday) values for the dependent and independent variables are observed, so the measurement errors (the difference between daily and intraday values) are also observed. In the data, the measurement error in the dependent variable is much larger than in the independent variable (see Table \ref{tab:cevassumptions} in the Appendix).\footnote{ In line with this, regressing daily on intraday changes gives an \(R^2\) of 0.94 for policy rate surprises and of 0.18 for exchange rate returns. Also, remember that the standard deviation of the exchange rate returns doubles when the frequency goes from intraday to daily, whereas that of the policy rate surprises remains essentially the same (see Table \ref{tab:prssumm}).} Intuitively, the measurement error in policy rate surprises is small because monetary policy decisions are the main event for swap rates during announcement days. Meanwhile, a lot of factors other than monetary policy decisions affect the exchange rate in emerging markets that even a daily frequency is not enough to avoid their influence.
+
+Table \ref{tab:factorfx} exploits the two lengths for the event window to shed light on the puzzle. It reports the estimation of equation (\ref{eq:nOneFac}) after combining the `true’ and `noisy’ versions of the dependent and independent variables. The `true’ (first two columns) and `noisy’ (last two columns) exchange rate returns are regressed on the `true’ (top row) and `noisy’ (bottom row) policy rate surprises. The first column of the Table is the ideal case in which there is no measurement error in neither of the variables, while the last column is the worst case since there is measurement error in both.\footnote{These two cases are the first columns of Tables \ref{tab:factorid} and \ref{tab:factordy}, but are reproduced here for ease of comparison.} In the remaining two cases, reported in the middle columns, only one of the variables is measured with error.
+%\input{../Tables/factorfx}
+\begin{center}
+	[Insert Table \ref{tab:factorfx} here.]
+\end{center}
+
+Measurement error in the policy rate surprises does not explain the puzzle. For the purposes of the validation study, the coefficient in the first column of Table 4 is treated as \textit{the} parameter because it is obtained from the `true' variables, and so a tightening leads to an appreciation of the currency, as discussed earlier.\footnote{An alternative interpretation is that the `true’ effect of policy rate surprises on the exchange rate returns is zero. This interpretation, however, would imply that there is a large market inefficiency, in which someone can bet against the exchange rate and systematically be gaining.} Comparing the coefficients in the first two columns shows that attenuation bias is relatively small (see also Table \ref{tab:cevassumptions}), thus the effect of policy rate surprises on the currency is significant and relevant even when the surprises are measured with error. On the other hand, the last column of Table \ref{tab:factorfx} shows that \(\estimB_{1}\) is biased towards zero and has a large standard error when the dependent and independent variables are measured with error. In the classical measurement error (CME) model, the least squares estimator \(\estimB_{1}\) has attenuation bias when only the independent variable is measured with error but is consistent, albeit with a larger standard error, when there is measurement error only in the dependent variable. In Table \ref{tab:factorfx}, however, `noisy' exchange rate returns invariably generate larger (upward) bias and standard errors, regardless of whether the policy rate surprises are measured with or without error.\footnote{Similarly, when bond yields are the dependent variable, there is a relatively small attenuation bias if policy rate surprises are measured with error and an upward bias if yield changes are measured with error. The upward bias dominates the attenuation bias, which explains why the coefficients for bond yields in Table \ref{tab:factordy} for the sample starting in 2011 are slightly larger than in Table \ref{tab:factorid}. \label{fn:factoryc}} 
+
+The reason behind the puzzle is thus noise in daily exchange rate returns. \textcite{PenningsRamayandiTang:2015} suggest that the weaker response of the exchange rate in emerging markets relative to advanced economies could be driven by a noisy measurement of monetary policy surprises---or less liquid financial markets. Table \ref{tab:factorfx} indicates instead that noise in daily exchange rate returns leads one to incorrectly conclude that the currency does not respond to the policy rate, even if policy rate surprises are measured without error. 
+
+\sectitlespace
+\subsection{Why Noise in Exchange Rate Returns Explains the Puzzle?}
+\sectitlespace
+Table \ref{tab:factorfx} shows that `noise’ in exchange rate returns causes not only imprecision (as in the CME model) but also bias in the estimation. 
+
+Measurement error in the dependent variable can cause bias in the estimation in two cases. First, if the error is systematically related to the independent variable, creating an endogeneity bias. In the data, however, the null hypothesis of zero correlation between the measurement error in the daily exchange rate returns and the policy rate surprises is not rejected (see Table \ref{tab:cevassumptions}). Alternatively, the slope coefficient of regressing the error on the surprises is not significant. 
+
+Second, if the error captures the effects of other variables influencing the exchange rate, it can generate an omitted variable bias. To support this explanation, controlling for potential omitted variable candidates when regressing the daily exchange rate returns on the policy rate surprises should at least reduce the bias and the larger standard errors identified in the last two columns of Table \ref{tab:factorfx}. Section \ref{sec:omittedvar} documents precisely this. 
+Appendix \ref{sec:plim} shows that there will be bias and imprecision in the estimator when the measurement error in the dependent variable captures an omitted factor, even if the independent variable is measured without error, consistent with the evidence in Table \ref{tab:factorfx}.
+
+\sectitlespace
+\subsection{Potential Omitted Variables} \label{sec:omittedvar}
+\sectitlespace
+Successful omitted variable candidates for the exchange rate should be exogenous to Banxico's monetary policy, and correlated with the daily exchange rate returns and the policy rate surprises (see equation (\ref{eq:nPlimBbias}) in the Appendix). 
+
+Variables with influence across global financial markets are natural candidates. The 2-year U.S. Treasury yield is a benchmark commonly used by market participants to capture the monetary stance in the U.S. 
+The Cboe's volatility index (VIX) captures the implied volatility in stock option prices, and is considered a measure of risk aversion and economic uncertainty. The West Texas Intermediate (WTI) crude oil price is relevant for the budget of the Mexican government given that Mexico is an oil exporter country.
+
+Certain external events are also important for emerging market currencies. For instance, the U.S. dollar responds significantly to different U.S. macroeconomic news \parencite{ABDV:2003,FRWW:2007}. If the news happens to be released on days in which Banxico announces monetary policy decisions, daily returns of the peso-dollar exchange rate will reflect at least those two events. Appendix \ref{sec:calendar} shows that it is indeed common for Banxico announcements to coincide with releases of relevant U.S. macroeconomic news.
+
+U.S. labor market data are a good example of omitted variables for the daily returns of the exchange rate. Banxico's monetary policy announcements coincided with releases of nonfarm payrolls on 11 occasions between 2011 and 2014, and 30 times with releases of initial jobless claims between 2015 and 2018.\footnote{In fact, the timing change of the announcements in 2015---from 10 a.m. ET Fridays to 2 p.m. ET Thursdays---made their coincidence with U.S. labor market news almost a certainty (see Appendix \ref{sec:calendar}). The U.S. Department of Labor releases at 8:30 a.m. ET the change in nonfarm payrolls monthly generally on a Friday, and initial jobless claims weekly generally on a Thursday.} 
+Consider, for instance, the announcement on September 6, 2013, in which Banxico unexpectedly cut its policy rate by 25 basis points at 10 a.m. ET. According to the estimation results with intraday data, this would have depreciated the currency by around 55 basis points, but the peso actually \textit{appreciated} 168 basis points during the day.\footnote{ In the 30-minute window around the announcement, the peso appreciated only 15 basis points.} Earlier that day, at 8:30 a.m. ET, nonfarm payrolls data for the previous month were released. Job gains were less than expected according to survey forecasts (169,000 versus 180,000), which analysts interpreted as evidence that it would take the Fed longer than previously anticipated to remove the monetary stimulus it suggested earlier in the year in what is known as the taper tantrum. Asset prices in turn reacted as if there was a loosening surprise in the U.S. policy rate, depreciating the U.S. dollar (and appreciating the Mexican peso). 
+
+The following regression helps testing whether these variables indeed reduce the bias and standard error detected when the dependent variable is measured with error: 
+\input{../Equations/nOneFacOV}
+in which the dependent variable is the daily exchange rate returns, \(PRS\) denotes the policy rate surprises (measured with and without error), \(\Delta VIX\) indicates the daily change in the VIX, \(\Delta USY\) refers to the daily change in the 2-year U.S. Treasury yield from the Federal Reserve's H.15 dataset,\footnote{Results using the 10- instead of the 2-year U.S. Treasury yield are similar.} \(WTI\) is the closing price of the oil benchmark, and \(\jobs\) is the surprise part in releases of U.S. labor market data. Surprises in initial jobless claims, nonfarm payrolls and in the unemployment rate are calculated as the difference between the released number and survey expectations from Money Market Services.\footnote{Data from Money Market Services is available from 2000 to 2018. When there is no U.S. labor market news on a day in which Banxico announces a monetary policy decision, \(\jobs_{\idxt}\) is set to zero.} Any of the three U.S. labor market surprises can be used, but only the effect of surprises in initial jobless claims (\(IJC \, Surprise\)) is statistically significant. Table \ref{tab:factorov_fx} reports the results. 
+The first two columns reproduce the last two columns of Table \ref{tab:factorfx} for ease of comparison, and the last two columns control for the potential omitted variables.\footnote{Since the intercept is not included for the regressions in Table \ref{tab:factorfx}, it is also excluded for the regressions in Table \ref{tab:factorov_fx} so that the results are comparable. The outcome is similar when the intercept is included.}
+%\input{../Tables/factorov_fx}		% \ref{tab:factorov_fx}
+\begin{center}
+	[Insert Table \ref{tab:factorov_fx} here.]
+\end{center}
+
+Table \ref{tab:factorov_fx} supports that noise in daily exchange rate returns gives rise to bias due to omitted variables. After controlling for the potential omitted variables, the bias and standard error indeed decline.\footnote{Table \ref{tab:factorov_10y} in the Appendix shows that the upward bias when the dependent variable is the (change in the) 10-year yield (see footnote \ref{fn:factoryc}) also declines after controlling for the same variables.} The \(R^2\) statistic increases substantially as well.\footnote{The \(R^2\) from regressing the measurement error in the dependent variable on all the potential omitted variables is 0.12. These variables are jointly statistically significant at the 1\% level.} In addition, Appendix \ref{sec:plim} characterizes the bias and shows that all the variables considered contribute for \(\estimB_{1}\) to be upward bias. Yet despite these improvements, no significant effect of policy rate surprises on the exchange rate is detected, suggesting that more than one omitted variable might be blurring the response of the currency to the policy rate with daily data. Using intraday data---at least for the exchange rate---avoids this problem.
+
+In summary, measurement error in daily exchange rate returns causes not only imprecision in the estimation (as in the CME model) but also bias due to omitted variables. 
+
+\sectitlespace
+\section{CONCLUDING REMARKS}\label{sec:conclusions}
+\sectitlespace
+
+This paper shows that monetary policy has significant effects on the exchange rate of an emerging economy, unlike the previous literature. An unanticipated increase in the policy rate appreciates the currency. Emerging market currencies are thus no different to those in advanced economies in terms of their responsiveness to the domestic policy rate. No special models are required for emerging markets in this regard. 
+
+The response, however, can only be perceived using intraday data for the exchange rate. 
+In this sense, the lack of response of emerging market currencies to monetary policy found so far in the literature is the result of wide event windows, allowing omitted variables to blur the response of the exchange rate to the policy rate. 
+
+The sensitivity of the currency response to data frequency does not mean that monetary policy is not important. It means that surprises in the policy rate are small enough that their effect on the exchange rate can only be seen in intraday windows. Banxico, like other central banks, works hard to communicate information to market participants ahead of time so that, by the time of an announcement, most of it is already expected. 
+
+The results in this paper can be extended in different directions. More research using long spans of intraday data for other emerging market currencies is needed to further quantify the impact of monetary policy on the exchange rate in emerging markets, a task that has been elusive so far. Future research can also study the extent to which the sensitivity to data frequency is characteristic of emerging market currencies. 

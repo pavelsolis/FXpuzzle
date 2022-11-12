@@ -1,0 +1,155 @@
+%% Personalized Macros
+% Variable Definitions, Equations
+
+%---------------------------------------------------------------
+% Variable Definitions
+%---------------------------------------------------------------
+\providecommand{\tiie}{TIIE28D}
+\providecommand{\lastobs}{December 2021}
+\providecommand{\lastobsfx}{November 2021}
+\providecommand{\lastobsflwbdm}{December 2021}
+\providecommand{\lastobsflwtic}{August 2021}
+\providecommand{\idxt}{t}
+\providecommand{\idxh}{h}
+\providecommand{\idxi}{i}
+\providecommand{\idxsfwd}{\idxt+\idxh}
+\providecommand{\idxslag}{\idxt-1}
+\providecommand{\yld}{y}
+\providecommand{\ctrls}{z}
+\providecommand{\hld}{H}
+\providecommand{\depvar}{\Delta \yld_{\idxt}}
+\providecommand{\mps}{\Delta x_{\idxt}}
+\providecommand{\depvarclean}{\depvar^{*}}
+\providecommand{\mpsclean}{\mps^{*}}
+\providecommand{\paramB}{\beta}
+\providecommand{\intrcpt}{\paramB_{0}}
+\providecommand{\slopetrgt}{\paramB_{1}}
+\providecommand{\slopepath}{\paramB_{2}}
+\providecommand{\assets}{X}
+\providecommand{\factors}{F}
+\providecommand{\loadings}{\Lambda}
+\providecommand{\rotated}{Z}
+\providecommand{\rmatrix}{U}
+\providecommand{\rtdone}{\rotated_{1}}
+\providecommand{\rtdtwo}{\rotated_{2}}
+\providecommand{\rtdonereg}{Target_{\idxt}}
+\providecommand{\rtdtworeg}{Path_{\idxt}}
+\providecommand{\lagidx}{j}
+\providecommand{\lagorder}{p}
+\providecommand{\lagparam}{\gamma}   %\alpha
+\providecommand{\lagoper}{L}
+\providecommand{\depvarflw}{\Delta \hld_{\idxt}}
+\providecommand{\flows}{w_{\idxt}}
+\providecommand{\flowslag}{w_{\idxt - \lagidx}}
+\providecommand{\lagsum}{\sum_{\lagidx = 1}^{\lagorder} \lagparam_{\lagidx} \flowslag}
+\providecommand{\lagsumh}{\sum_{\lagidx = 1}^{\lagorder} \lagparam^{\lagidx}_\idxh \flowslag}
+\providecommand{\dimobs}{T}
+\providecommand{\dimassets}{n}
+\providecommand{\dimfactors}{k}
+\providecommand{\dimnull}{\dimfactors_{0}}
+\providecommand{\dimsassets}{\dimobs \times \dimassets}
+\providecommand{\dimsfactors}{\dimobs \times \dimfactors}
+\providecommand{\dimsloadings}{\dimfactors \times \dimassets}
+\providecommand{\errorreg}{\varepsilon_{\idxt}}
+\providecommand{\errorfac}{\zeta}
+\providecommand{\errorflows}{\nu_{\idxt}}
+\providecommand{\Rsqrt}{R^{2}}
+
+\providecommand{\dpv}{y}
+\providecommand{\idv}{x}
+\providecommand{\omv}{\omega}
+\providecommand{\dpvstar}{\dpv^{*}}
+\providecommand{\idvstar}{\idv^{*}}
+\providecommand{\jobs}{Jobs}
+\providecommand{\errortrue}{\varepsilon}
+\providecommand{\errormix}{\tau}
+\providecommand{\melhs}{\nu}
+\providecommand{\merhs}{u}
+\providecommand{\mean}{\mu}
+\providecommand{\covar}{\sigma}
+\providecommand{\corr}{\rho}
+\providecommand{\var}{\covar^{2}}
+\providecommand{\meanE}{\mean_{\errortrue}}
+\providecommand{\meanU}{\mean_{\merhs}}
+\providecommand{\meanV}{\mean_{\melhs}}
+\providecommand{\varE}{\var_{\errortrue}}
+\providecommand{\varU}{\var_{\merhs}}
+\providecommand{\varV}{\var_{\melhs}}
+\providecommand{\varX}{\var_{\idv}}
+\providecommand{\varXstar}{\var_{\idvstar}}
+\providecommand{\covarEX}{\covar_{\errortrue \idvstar}}
+\providecommand{\covarUE}{\covar_{\merhs \errortrue}}
+\providecommand{\covarVE}{\covar_{\melhs \errortrue}}
+\providecommand{\covarUX}{\covar_{\merhs \idvstar}}
+\providecommand{\covarUY}{\covar_{\merhs \dpvstar}}
+\providecommand{\covarVX}{\covar_{\melhs \idvstar}}
+\providecommand{\covarVY}{\covar_{\melhs \dpvstar}}
+\providecommand{\covarUV}{\covar_{\merhs \melhs}}
+\providecommand{\covarWXe}{\covar_{\omv \idv}}
+\providecommand{\covarVXe}{\covar_{\melhs \idv}}
+\providecommand{\corrUV}{\corr_{\merhs \melhs}}
+\providecommand{\corrUX}{\corr_{\merhs \idvstar}}
+\providecommand{\corrUY}{\corr_{\merhs \dpvstar}}
+\providecommand{\corrVX}{\corr_{\melhs \idvstar}}
+\providecommand{\corrVY}{\corr_{\melhs \dpvstar}}
+\providecommand{\paramG}{\gamma}
+\providecommand{\estimB}{\hat{\paramB}}
+\providecommand{\paramSE}{\varE}
+\providecommand{\estimSE}{\hat{\paramSE}}
+\providecommand{\paramAVB}{s}
+\providecommand{\estimAVB}{\hat{\paramAVB}}
+\providecommand{\attnfactor}{\lambda}
+\providecommand{\plim}{\mathrm{plim}}
+
+\providecommand{\reg}{\delta}
+\providecommand{\regVonX}{\reg_{\melhs \idv}}
+\providecommand{\regWonX}{\reg_{\omv \idv}}
+\providecommand{\regWonXstar}{\reg_{\omv \idvstar}}
+
+%---------------------------------------------------------------
+% Equations
+%---------------------------------------------------------------
+\newcommand{\eqOneFac}{\depvar = \intrcpt + \slopetrgt \mps + \errorreg}
+\newcommand{\eqOneFacOV}{\depvar = \intrcpt + \slopetrgt PRS_{\idxt} + \paramB_{2} \Delta VIX_{\idxt} + \paramB_{3} \Delta USY_{\idxt} + \paramB_{4} WTI_{\idxt} + \paramB_{5} \jobs_{\idxt} + \errorreg}
+\newcommand{\eqTwoFacP}{\depvar = \intrcpt + \slopetrgt \rtdonereg + \slopepath \rtdtworeg + \errorreg}
+\newcommand{\eqTwoFacF}{\depvarflw = \intrcpt + \slopetrgt \rtdonereg + \slopepath \rtdtworeg + \errorreg}
+\newcommand{\eqPCA}{\assets = \factors \loadings + \errorfac}
+\newcommand{\eqRotation}{\rotated = \factors \, \rmatrix}
+\newcommand{\eqFlows}{\flows = \intrcpt + \slopetrgt \rtdonereg + \slopepath \rtdtworeg + \lagsum + \eta^{'} \ctrls_{\idxslag} + \errorflows}
+\newcommand{\eqAsym}{\yld_{\idxt} = \intrcpt + \paramB_{1} \rtdonereg \mathds{1} \left(\rtdonereg > 0 \right) + \paramB_{2} \rtdonereg \mathds{1} \left(\rtdonereg < 0 \right) \\ + \paramB_{3} \rtdtworeg \mathds{1} \left(\rtdtworeg > 0 \right) + \paramB_{4} \rtdtworeg \mathds{1} \left(\rtdtworeg < 0 \right) + \errorreg}
+
+\newcommand{\eqDGP}{\dpvstar &= \paramB \idvstar + \errortrue}
+\newcommand{\eqDGPme}{\dpv = \paramB \idv + \errormix = \paramB \idv + \eqErrormix}
+\newcommand{\eqDGPov}{\dpvstar = \paramB \idvstar + \paramG \omv +  \errortrue}
+\newcommand{\eqMEdpv}{\dpv &= \dpvstar + \melhs}
+\newcommand{\eqMEidv}{\idv &= \idvstar + \merhs}
+\newcommand{\eqAtten}{\attnfactor = \frac{\varXstar}{\varXstar + \varU}}
+\newcommand{\eqAttenInLine}{\attnfactor = \varXstar / \left(\varXstar + \varU\right) }
+\newcommand{\eqErrormix}{\errortrue - \paramB \merhs + \melhs}
+
+\newcommand{\eqPlimBstd}{\plim \left( \estimB \right) = \frac{cov(\idv, \dpvstar)}{var(\idv)} = \frac{cov(\idvstar + \merhs, \paramB \idvstar + \errortrue)}{var(\idvstar + \merhs)} = \paramB \frac{\varXstar}{\varXstar + \varU} = \paramB \attnfactor}
+\newcommand{\eqPlimBstdshort}{\plim (\estimB) = \paramB \attnfactor}
+
+\newcommand{\eqPlimSstd}{\plim \left( \estimAVB \right) = \attnfactor \paramAVB + \attnfactor(1 - \attnfactor) \paramB^{2}}
+
+\newcommand{\eqPlimBnew}{\plim \left( \estimB \right) 
+	= \frac{cov(\idv, \dpv)}{var(\idv)} 
+	= \frac{cov(\idvstar + \merhs, \paramB \idvstar + \paramG \omv + \errortrue)}{var(\idvstar + \merhs)} 
+	= \frac{\paramB \varXstar + \paramG \covarWXe}{\varXstar + \varU}  }
+
+\newcommand{\eqPlimBbias}{\plim \left( \estimB \right)
+	= \paramB \frac{\varXstar}{\varX} + \paramG \frac{\covarWXe}{\varX}
+	= \paramB \attnfactor + \paramG \regWonX}
+
+\providecommand{\errordepvar}{e_{y}}
+\providecommand{\errormps}{e_{x}}
+\newcommand{\eqMEdepvar}{\depvar &= \depvarclean + \errordepvar}
+\newcommand{\eqMEmps}{\mps &= \mpsclean + \errormps}
+
+\newcommand{\eqLPrhs}{\alpha_{\idxh} + \beta^{1}_{\idxh} \; \rtdonereg +  \beta^{2}_{\idxh} \; \rtdtworeg + \eta^{'}_{\idxh} \ctrls_{\idxslag}  + u_{\idxsfwd}}
+
+\newcommand{\eqLPprices}{\yld_{\idxsfwd} - \yld_{\idxslag} = \eqLPrhs} 
+
+\newcommand{\eqLPflows}{\hld_{\idxsfwd} - \hld_{\idxslag} = \eqLPrhs} 
+
+\newcommand{\eqLP}{\yld_{\idxsfwd} - \yld_{\idxslag} = \alpha_{\idxh} + \gamma_{\idxh} \mps + u_{\idxsfwd}} 

@@ -1,0 +1,27 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[labelsep=period,labelfont=bf]{caption}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{threeparttable}
+\usepackage{pdflscape}
+\usepackage{tabularx}
+%\usepackage[margin=1in]{geometry}
+\input{../Settings/macros_global}			   % Personalized commands
+\input{../Settings/macros_local}			    % Personalized commands
+%\pagestyle{empty}
+
+\begin{document}
+	\begin{normalsize}
+		%		\begin{landscape}
+		\begin{table}[t]
+			\begin{center}
+				\caption{Summary Statistics for Asset Price Changes} \label{tab:prssumm}
+				\begin{threeparttable}
+					\estauto{../Tables/f_prssumm.tex}{5}
+					\tabnote{This table reports summary statistics for intraday and daily policy rate surprises (PRS), exchange rate (FX) returns and changes in bond yields around monetary policy announcements. Daily changes are calculated around the announcements; intraday changes are calculated from 10 minutes before to 20 minutes after an announcement. All values are expressed in basis points. The sample includes all regular monetary policy announcements from January 2011 to \lastobsfx; intraday changes for the 5-year yield start on December 2014 and for all other yields on January 2013.}
+				\end{threeparttable}
+			\end{center}
+		\end{table}
+		%		\end{landscape}
+	\end{normalsize}
+\end{document}

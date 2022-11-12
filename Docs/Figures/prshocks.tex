@@ -1,0 +1,23 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+\usepackage[outdir=./]{epstopdf}  					% Avoids errors when input figures
+\usepackage[labelsep=period,labelfont=bf]{caption}
+\usepackage{afterpage}
+
+\begin{document}
+\afterpage{
+	\begin{figure}[tb]
+		\caption{Policy Rate in Mexico: Change vs. Surprises} \label{fig:prshocks}
+		\begin{center}								% center the minipage on the line
+			\begin{minipage}{0.9\linewidth}
+				\begin{center}							% center the figure inside the minipage
+					\includegraphics[width=1\textwidth,height=.3\textheight]{../Figures/prshocks.eps} \\
+				\end{center}
+				\fignotes{This figure compares the evolution of the surprises (solid line) and the raw changes (dashed line) in the policy rate. The surprises are the change in the 3-month swap in 30-minute windows bracketing monetary policy announcements from January 2011 to \lastobsfx.}
+			\end{minipage}
+		\end{center}
+	\end{figure}
+}
+\end{document}
+% trim = {<left> <lower> <right> <upper>}

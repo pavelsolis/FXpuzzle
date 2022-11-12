@@ -1,0 +1,61 @@
+%---------------------------------------------------------------
+% Preamble
+%---------------------------------------------------------------
+\documentclass[a4paper,12pt]{article} 		% Document class
+\input{../Settings/packages}		   		  	  % Packages
+\input{../Settings/page_settings}   			% Page settings
+\input{../Settings/macros_global}			   % Personalized commands
+\input{../Settings/macros_local}			    % Personalized commands
+\tracinggroups=1
+\tracingrestores=1
+\tracingassigns=1
+\showboxdepth=0
+\showboxbreadth=0
+%---------------------------------------------------------------
+
+\begin{document}
+%---------------------------------------------------------------
+% Title Page
+%---------------------------------------------------------------
+\title{\vspace{-1.0cm}\textchange{\input{../Settings/title}} \hspace{-1em} \thanks{\protect\linespread{1}\protect\selectfont I am particularly grateful to Jonathan Wright, the editor Kenneth West and two anonymous referees. I also thank Julien Acalin, Derin Aksit, Laurence Ball, Enrique Batiz, Lalit Contractor, Jorge Luis García Ramírez, Olivier Jeanne, Fabrizio López Gallo Dey, Claudia Ramírez Bulos, Alessandro Rebucci, Jeongwon Son and seminar participants at Banco de México and Johns Hopkins University for their helpful comments and suggestions. The views in this paper are the sole responsibility of the author and should not be interpreted as reflecting the views of Banco de México or any other person associated with it. All remaining errors are mine.} % Declaration of interest: None.
+	}
+\author{Pavel Solís\thanks{\protect\linespread{1}\protect\selectfont Economist, Financial Stability Division, Banco de México, Av. 5 de Mayo 1, Centro, Cuauhtémoc, CDMX 06000, México. E-mail address: \href{mailto:pavel.solis@banxico.org.mx}{\texttt{pavel.solis@banxico.org.mx}}.}
+}
+\date{2022}
+
+\maketitle	\vspace{-4ex}
+
+%---------------------------------------------------------------
+% Contents
+%---------------------------------------------------------------
+\input{abstract}
+
+\input{sections}
+
+%---------------------------------------------------------------
+% Appendix, References and Footnotes
+%---------------------------------------------------------------
+\newpage
+\begin{appendices}
+	\input{appendix}
+\end{appendices}
+
+\titleformat{\section}{\large\bfseries}{}{0pt}{}
+\uspunctuation
+\printbibliography[title={LITERATURE CITED}]
+
+\newpage
+\theendnotes
+
+%---------------------------------------------------------------
+% Tables and Figures
+%---------------------------------------------------------------
+\input{floats}
+
+\end{document}
+
+%---------------------------------------------------------------
+% CRediT (Contributor Roles Taxonomy) author statement
+%---------------------------------------------------------------
+% Pavel Solís: Conceptualization, methodology, data curation, formal analysis, investigation, software, validation, visualization, writing.
+% Jonathan Wright: Supervision.
