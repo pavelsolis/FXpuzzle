@@ -1,0 +1,1269 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{Aktasetal:2009}{article}{}
+      \name{author}{5}{}{%
+        {{hash=1c0d945a082584092ee1173199d0cfc0}{%
+           family={Aktaş},
+           familyi={A\bibinitperiod},
+           given={Zelal},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=41abe32ed0e26de97023a1483db6102c}{%
+           family={Alp},
+           familyi={A\bibinitperiod},
+           given={Harun},
+           giveni={H\bibinitperiod}}}%
+        {{hash=ec4332733b7a4646219250aa7d409c5b}{%
+           family={Gürkaynak},
+           familyi={G\bibinitperiod},
+           given={Refet\bibnamedelima S.},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=d7b096d8e1367c2f7da4f9d85eed922a}{%
+           family={Kesriyeli},
+           familyi={K\bibinitperiod},
+           given={Mehtap},
+           giveni={M\bibinitperiod}}}%
+        {{hash=61337e35e0071af96356ea669cd536e6}{%
+           family={Orak},
+           familyi={O\bibinitperiod},
+           given={Musa},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{078da72f57bd8340d733908fe7a31630}
+      \strng{fullhash}{cbcfcd799cd111dfd09f765ad413c710}
+      \strng{bibnamehash}{cbcfcd799cd111dfd09f765ad413c710}
+      \strng{authorbibnamehash}{cbcfcd799cd111dfd09f765ad413c710}
+      \strng{authornamehash}{078da72f57bd8340d733908fe7a31630}
+      \strng{authorfullhash}{cbcfcd799cd111dfd09f765ad413c710}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{278}
+      \field{journaltitle}{İktisat İşletme ve Finans}
+      \field{title}{Transmission of Monetary Policy in {Turkey}: The Effects of Monetary Policy on Financial Markets}
+      \field{volume}{24}
+      \field{year}{2009}
+    \endentry
+    \entry{ABDV:2003}{article}{}
+      \name{author}{4}{}{%
+        {{hash=09c85c9c10e1f8f0e62363a927495479}{%
+           family={Andersen},
+           familyi={A\bibinitperiod},
+           given={Torben\bibnamedelima G.},
+           giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=39f8f5a428abd62057a0152546172106}{%
+           family={Bollerslev},
+           familyi={B\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+        {{hash=15cc2e3b52b5ea2d3045be532376a348}{%
+           family={Diebold},
+           familyi={D\bibinitperiod},
+           given={Francis\bibnamedelima X.},
+           giveni={F\bibinitperiod\bibinitdelim X\bibinitperiod}}}%
+        {{hash=92cc79f101a8a922f725cb4238c5cce2}{%
+           family={Vega},
+           familyi={V\bibinitperiod},
+           given={Clara},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{9272a1c6d168447aacb6c6349cd85cab}
+      \strng{fullhash}{e2af802e6dee1b959d7fa35a14da61b4}
+      \strng{bibnamehash}{e2af802e6dee1b959d7fa35a14da61b4}
+      \strng{authorbibnamehash}{e2af802e6dee1b959d7fa35a14da61b4}
+      \strng{authornamehash}{9272a1c6d168447aacb6c6349cd85cab}
+      \strng{authorfullhash}{e2af802e6dee1b959d7fa35a14da61b4}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Using a new data set consisting of six years of real-time exchange-rate quotations, macroeconomic expectations, and macroeconomic realizations, we characterize the conditional means of U.S. dollar spot exchange rates. In particular, we find that announcement surprises produce conditional mean jumps; hence high-frequency exchange-rate dynamics are linked to fundamentals. The details of the linkage are intriguing and include announcement timing and sign effects. The sign effect refers to the fact that the market reacts to news in an asymmetric fashion: bad news has greater impact than good news, which we relate to recent theoretical work on information processing and price discovery.}
+      \field{issue}{1}
+      \field{journaltitle}{American Economic Review}
+      \field{month}{3}
+      \field{title}{Micro Effects of Macro Announcements: Real-Time Price Discovery in Foreign Exchange}
+      \field{volume}{93}
+      \field{year}{2003}
+      \field{pages}{38\bibrangedash 62}
+      \range{pages}{25}
+      \keyw{Event Studies,Foreign Exchange,International Financial Markets,Information and Market Efficiency,Insider Trading}
+    \endentry
+    \entry{BZP:2001}{report}{}
+      \name{author}{3}{}{%
+        {{hash=cafbd97bdcf5d257328b50f724a27d7f}{%
+           family={Borensztein},
+           familyi={B\bibinitperiod},
+           given={Eduardo},
+           giveni={E\bibinitperiod}}}%
+        {{hash=98aabf42a387b190e7bafaa304915f4b}{%
+           family={Zettelmeyer},
+           familyi={Z\bibinitperiod},
+           given={Jeromin},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e66f36f8cd46b5e413f276903083f86e}{%
+           family={Philippon},
+           familyi={P\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{c6e6dfcc4f7a4c4e44adcee0ae1231d1}
+      \strng{fullhash}{c6e6dfcc4f7a4c4e44adcee0ae1231d1}
+      \strng{bibnamehash}{c6e6dfcc4f7a4c4e44adcee0ae1231d1}
+      \strng{authorbibnamehash}{c6e6dfcc4f7a4c4e44adcee0ae1231d1}
+      \strng{authornamehash}{c6e6dfcc4f7a4c4e44adcee0ae1231d1}
+      \strng{authorfullhash}{c6e6dfcc4f7a4c4e44adcee0ae1231d1}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Monetary Independence in Emerging Markets: Does the Exchange Rate Regime Make a Difference?}
+      \field{type}{IMF Working Paper No. 2001/001}
+      \field{year}{2001}
+    \endentry
+    \entry{Boundetal:1994}{article}{}
+      \name{author}{4}{}{%
+        {{hash=206a431f3c3d7796c2f18f2c019cee45}{%
+           family={Bound},
+           familyi={B\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=62ce1b47717048647a682cd9521d189c}{%
+           family={Brown},
+           familyi={B\bibinitperiod},
+           given={Charles},
+           giveni={C\bibinitperiod}}}%
+        {{hash=c3705f9f8737692fdd23931daf5ecef6}{%
+           family={Duncan},
+           familyi={D\bibinitperiod},
+           given={Greg\bibnamedelima J},
+           giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=592aba23789fc12c82a4a1181a7fbd78}{%
+           family={Rodgers},
+           familyi={R\bibinitperiod},
+           given={Willard\bibnamedelima L},
+           giveni={W\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{fc78cd8458bd8920657b315050767c80}
+      \strng{fullhash}{a3a64a8019033ff1b5090f4d3bc4373f}
+      \strng{bibnamehash}{a3a64a8019033ff1b5090f4d3bc4373f}
+      \strng{authorbibnamehash}{a3a64a8019033ff1b5090f4d3bc4373f}
+      \strng{authornamehash}{fc78cd8458bd8920657b315050767c80}
+      \strng{authorfullhash}{a3a64a8019033ff1b5090f4d3bc4373f}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This article investigates error properties of survey reports of labor market variables. We use the Panel Study of Income Dynamics (PSID) Validation Study, a two-wave panel survey of workers employed by a large firm that shared its detailed payroll records. Individuals' reports of annual earnings are fairly accurate. Errors are negatively related to true earnings, reducing bias due to measurement error when earnings are used as an independent variable. Biases are moderately larger for changes in earnings. Earnings per hour are less reliably reported than annual earnings. Biases in estimating earnings functions are relatively small, but those in labor supply functions may be important}
+      \field{issue}{3}
+      \field{journaltitle}{Journal of Labor Economics}
+      \field{title}{Evidence on the Validity of Cross-Sectional and Longitudinal Labor Market Data}
+      \field{volume}{12}
+      \field{year}{1994}
+      \field{pages}{345\bibrangedash 368}
+      \range{pages}{24}
+    \endentry
+    \entry{CalvoReinhart:2002}{article}{}
+      \name{author}{2}{}{%
+        {{hash=fc885233ab77bfb12503064c4e0094d0}{%
+           family={Calvo},
+           familyi={C\bibinitperiod},
+           given={Guillermo\bibnamedelima A.},
+           giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=7e5a248b2b57e8a01faa0b08bd59eecf}{%
+           family={Reinhart},
+           familyi={R\bibinitperiod},
+           given={Carmen\bibnamedelima M.},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{bd0309b289dfe57c82fdf19650e082bd}
+      \strng{fullhash}{bd0309b289dfe57c82fdf19650e082bd}
+      \strng{bibnamehash}{bd0309b289dfe57c82fdf19650e082bd}
+      \strng{authorbibnamehash}{bd0309b289dfe57c82fdf19650e082bd}
+      \strng{authornamehash}{bd0309b289dfe57c82fdf19650e082bd}
+      \strng{authorfullhash}{bd0309b289dfe57c82fdf19650e082bd}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Many emerging market countries have suffered financial crises. One view blames soft pegs for these crises. Adherents of this view suggest that countries move to corner solutions-hard pegs or floating exchange rates. We analyze the behavior of exchange rates, reserves, and interest rates to assess whether there is evidence that country practice is moving toward corner solutions. We focus on whether countries that claim they are floating are indeed doing so. We find that countries that say they allow their exchange rate to float mostly do not-there seems to be an epidemic case of "fear of floating".}
+      \field{issue}{2}
+      \field{journaltitle}{Quarterly Journal of Economics}
+      \field{title}{Fear of Floating}
+      \field{volume}{117}
+      \field{year}{2002}
+      \field{pages}{379\bibrangedash 408}
+      \range{pages}{30}
+    \endentry
+    \entry{CEE:1999}{incollection}{}
+      \name{author}{3}{}{%
+        {{hash=2efade9f4ee050a9a205d3efa326058d}{%
+           family={Christiano},
+           familyi={C\bibinitperiod},
+           given={Lawrence\bibnamedelima J.},
+           giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=3c07f9d81d480d76a0e2d1ca23c79c74}{%
+           family={Eichenbaum},
+           familyi={E\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0fb95a0fee670e48e9c766ea884df6cd}{%
+           family={Evans},
+           familyi={E\bibinitperiod},
+           given={Charles\bibnamedelima L.},
+           giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=e3dff114993f65bbf7693ec3251eab42}{%
+           family={Taylor},
+           familyi={T\bibinitperiod},
+           given={John\bibnamedelima B.},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=4e7f6ec4eb22dde123b8ebb1e85954fd}{%
+           family={Woodford},
+           familyi={W\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{fddd7d595966128b22ba82a9cb191fb0}
+      \strng{fullhash}{fddd7d595966128b22ba82a9cb191fb0}
+      \strng{bibnamehash}{fddd7d595966128b22ba82a9cb191fb0}
+      \strng{authorbibnamehash}{fddd7d595966128b22ba82a9cb191fb0}
+      \strng{authornamehash}{fddd7d595966128b22ba82a9cb191fb0}
+      \strng{authorfullhash}{fddd7d595966128b22ba82a9cb191fb0}
+      \strng{editorbibnamehash}{3d779fca79e72a98d4d43afd8260a837}
+      \strng{editornamehash}{3d779fca79e72a98d4d43afd8260a837}
+      \strng{editorfullhash}{3d779fca79e72a98d4d43afd8260a837}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This chapter reviews recent research that grapples with the question: What happens after an exogenous shock to monetary policy? We argue that this question is interesting because it lies at the center of a particular approach to assessing the empirical plausibility of structural economic models that can be used to think about systematic changes in monetary policy institutions and rules. The literature has not yet converged on a particular set of assumptions for identifying the effects of an exogenous shock to monetary policy. Nevertheless, there is considerable agreement about the qualitative effects of a monetary policy shock in the sense that inference is robust across a large subset of the identification schemes that have been considered in the literature. We document the nature of this agreement as it pertains to key economic aggregates.}
+      \field{booktitle}{Handbook of Macroeconomics Volume 1A}
+      \field{issn}{1574-0048}
+      \field{title}{Monetary Policy Shocks: What Have We Learned and to What End?}
+      \field{year}{1999}
+      \field{pages}{65\bibrangedash 148}
+      \range{pages}{84}
+      \keyw{monetary policy shocks,recursiveness assumption,benchmark analysis}
+    \endentry
+    \entry{DePooter_etal:2014}{article}{}
+      \name{author}{4}{}{%
+        {{hash=4240df554c941dda9a2578d8111b4f74}{%
+           family={{De Pooter}},
+           familyi={D\bibinitperiod},
+           given={Michiel},
+           giveni={M\bibinitperiod}}}%
+        {{hash=94114c0ed7c3eeeea0c25f67b7df4c23}{%
+           family={Robitaille},
+           familyi={R\bibinitperiod},
+           given={Patrice},
+           giveni={P\bibinitperiod}}}%
+        {{hash=7d1f2ebfba53a0f331761e8a4cdce707}{%
+           family={Walker},
+           familyi={W\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+        {{hash=007ade62f27eded4a4b21093c7ba6c6c}{%
+           family={Zdinak},
+           familyi={Z\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{7e642dd6f7516173827eae6d84d763ad}
+      \strng{fullhash}{a64b81d134c43832763e1e834d822f80}
+      \strng{bibnamehash}{a64b81d134c43832763e1e834d822f80}
+      \strng{authorbibnamehash}{a64b81d134c43832763e1e834d822f80}
+      \strng{authornamehash}{7e642dd6f7516173827eae6d84d763ad}
+      \strng{authorfullhash}{a64b81d134c43832763e1e834d822f80}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{2}
+      \field{journaltitle}{International Journal of Central Banking}
+      \field{title}{Are Long-Term Inflation Expectations Well-Anchored in {Brazil, Chile and Mexico}?}
+      \field{volume}{10}
+      \field{year}{2014}
+      \field{pages}{337\bibrangedash 400}
+      \range{pages}{64}
+    \endentry
+    \entry{Dornbusch:1976}{article}{}
+      \name{author}{1}{}{%
+        {{hash=36a7bf7a14a41885b7ed1276e1bea1e4}{%
+           family={Dornbusch},
+           familyi={D\bibinitperiod},
+           given={Rudiger},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{36a7bf7a14a41885b7ed1276e1bea1e4}
+      \strng{fullhash}{36a7bf7a14a41885b7ed1276e1bea1e4}
+      \strng{bibnamehash}{36a7bf7a14a41885b7ed1276e1bea1e4}
+      \strng{authorbibnamehash}{36a7bf7a14a41885b7ed1276e1bea1e4}
+      \strng{authornamehash}{36a7bf7a14a41885b7ed1276e1bea1e4}
+      \strng{authorfullhash}{36a7bf7a14a41885b7ed1276e1bea1e4}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The paper develops a theory of exchange rate movements under perfect capital mobility, a slow adjustment of goods markets relative to asset markets, and consistent expectations. The perfect foresight path is derived and it is shown that along that path a monetary expansion causes the exchange rate to depreciate. An initial overshooting of exchange rates is shown to derive from the differential adjustment speed of markets. The magnitude and persistence of the overshooting is developed in terms of the structural parameters of the model. To the extent that output responds to a monetary expansion in the short run, this acts as a dampening effect on exchange depreciation and may, in fact, lead to an increase in interest rates.}
+      \field{issue}{6}
+      \field{journaltitle}{Journal of Political Economy}
+      \field{title}{Expectations and Exchange Rate Dynamics}
+      \field{volume}{84}
+      \field{year}{1976}
+      \field{pages}{1161\bibrangedash 1176}
+      \range{pages}{16}
+    \endentry
+    \entry{Duranetal:2012}{article}{}
+      \name{author}{4}{}{%
+        {{hash=c30e5ecd3dfdb51d0f53ef6e12f52099}{%
+           family={Duran},
+           familyi={D\bibinitperiod},
+           given={Murat},
+           giveni={M\bibinitperiod}}}%
+        {{hash=13befa0c7cb4c07da0feedfc742e1472}{%
+           family={Özcan},
+           familyi={Ö\bibinitperiod},
+           given={Gülserim},
+           giveni={G\bibinitperiod}}}%
+        {{hash=e83543481339e4e4403d3c2c483b2391}{%
+           family={Özlü},
+           familyi={Ö\bibinitperiod},
+           given={Pinar},
+           giveni={P\bibinitperiod}}}%
+        {{hash=6ba507f946eed814491b50ee05b12e15}{%
+           family={Ünalmiş},
+           familyi={Ü\bibinitperiod},
+           given={Deren},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{2a979486dc7f681e4f8e7b9695385239}
+      \strng{fullhash}{75b1c69d27bdb7c8d821edf67899392d}
+      \strng{bibnamehash}{75b1c69d27bdb7c8d821edf67899392d}
+      \strng{authorbibnamehash}{75b1c69d27bdb7c8d821edf67899392d}
+      \strng{authornamehash}{2a979486dc7f681e4f8e7b9695385239}
+      \strng{authorfullhash}{75b1c69d27bdb7c8d821edf67899392d}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Little is known about the impact of monetary policy on asset prices in emerging markets. This study applies the heteroscedasticity-based GMM for financial markets in Turkey. The results suggest that event study estimates are biased for some asset returns.}
+      \field{issue}{1}
+      \field{journaltitle}{Economics Letters}
+      \field{title}{Measuring the Impact of Monetary Policy on Asset Prices in {Turkey}}
+      \field{volume}{114}
+      \field{year}{2012}
+      \field{pages}{29\bibrangedash 31}
+      \range{pages}{3}
+      \keyw{Asset prices,Emerging market,Identification through heteroscedasticity,Monetary policy}
+    \endentry
+    \entry{FRWW:2007}{article}{}
+      \name{author}{4}{}{%
+        {{hash=fefe84f12b622581d43328248ed11a6e}{%
+           family={Faust},
+           familyi={F\bibinitperiod},
+           given={Jon},
+           giveni={J\bibinitperiod}}}%
+        {{hash=8781c36b4edfc5dfe4ddbfbdc349db1b}{%
+           family={Rogers},
+           familyi={R\bibinitperiod},
+           given={John\bibnamedelima H.},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=6d4325c6fa8aa68b40277ec99d9cebe8}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Shing\bibnamedelimb Yi\bibnamedelima B.},
+           giveni={S\bibinitperiod\bibinitdelim Y\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=3dd0466987f8b46207bad516d8f85045}{%
+           family={Wright},
+           familyi={W\bibinitperiod},
+           given={Jonathan\bibnamedelima H.},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{0f6bd38289fceadbd35164196eba2c5f}
+      \strng{fullhash}{afe99a390bcb9f922b9743ca51029f2e}
+      \strng{bibnamehash}{afe99a390bcb9f922b9743ca51029f2e}
+      \strng{authorbibnamehash}{afe99a390bcb9f922b9743ca51029f2e}
+      \strng{authornamehash}{0f6bd38289fceadbd35164196eba2c5f}
+      \strng{authorfullhash}{afe99a390bcb9f922b9743ca51029f2e}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The joint movements of exchange rates and U.S. and foreign term structures over short-time windows around macro announcements are studied using a 14-year span of high-frequency data. In order to evaluate whether the joint effects can be reconciled with conventional theory, the implications of these joint movements for changes in expected future exchange rates and changes in foreign exchange risk premia are deduced. For several real macro announcements, a stronger than expected release appreciates the dollar today, and must either (i) lower the risk premium for holding foreign currency rather than dollars, or (ii) imply net expected dollar depreciation over the ensuing decade. © 2006 Elsevier B.V. All rights reserved.}
+      \field{issue}{4}
+      \field{journaltitle}{Journal of Monetary Economics}
+      \field{title}{The High-Frequency Response of Exchange Rates and Interest Rates to Macroeconomic Announcements}
+      \field{volume}{54}
+      \field{year}{2007}
+      \field{pages}{1051\bibrangedash 1068}
+      \range{pages}{18}
+      \keyw{Data releases,Exchange rates,Overshooting,Uncovered interest parity}
+    \endentry
+    \entry{FerrariKearnsSchrimpf:2021}{article}{}
+      \name{author}{3}{}{%
+        {{hash=139718cf6adb7d3543c59c0d23aa7368}{%
+           family={Ferrari},
+           familyi={F\bibinitperiod},
+           given={Massimo},
+           giveni={M\bibinitperiod}}}%
+        {{hash=18e3374ce3d376e3d2daa5e89b175349}{%
+           family={Kearns},
+           familyi={K\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=08ecbebba2479a0bce04c84343030dd4}{%
+           family={Schrimpf},
+           familyi={S\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {North-Holland}%
+      }
+      \strng{namehash}{4f07e5cd89aff778b28c005d8ef827cf}
+      \strng{fullhash}{4f07e5cd89aff778b28c005d8ef827cf}
+      \strng{bibnamehash}{4f07e5cd89aff778b28c005d8ef827cf}
+      \strng{authorbibnamehash}{4f07e5cd89aff778b28c005d8ef827cf}
+      \strng{authornamehash}{4f07e5cd89aff778b28c005d8ef827cf}
+      \strng{authorfullhash}{4f07e5cd89aff778b28c005d8ef827cf}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We show that the impact of monetary policy on exchange rates has been growing significantly in recent years. Our results are established by a high-frequency event study of how key fixed income instruments with different maturities respond jointly with exchange rates to monetary policy news from six major central banks. Across countries, news affecting short-term maturity bonds tend to have the strongest impact, highlighting the relevance of communication regarding the path of future monetary policy for exchange rate movements even when policy rates are near their lower bound. We find that the FX impact of monetary policy is state-dependent and is stronger the lower is the level of interest rates, in line with a greater effect through currency risk premia.}
+      \field{journaltitle}{Journal of Banking and Finance}
+      \field{month}{8}
+      \field{title}{Monetary policy’s rising {FX} impact in the era of ultra-low rates}
+      \field{volume}{129}
+      \field{year}{2021}
+      \field{pages}{106142}
+      \range{pages}{1}
+      \keyw{Event study,Exchange rates,High frequency data,Unconventional monetary policy}
+    \endentry
+    \entry{GVRFSM:2019}{article}{}
+      \name{author}{3}{}{%
+        {{hash=5f855c5fe04c784736a0a1a2a8558dab}{%
+           family={García-Verdú},
+           familyi={G\bibinithyphendelim V\bibinitperiod},
+           given={Santiago},
+           giveni={S\bibinitperiod}}}%
+        {{hash=dea7b16fd31707bc9862c70ed3d33e5f}{%
+           family={Ramos-Francia},
+           familyi={R\bibinithyphendelim F\bibinitperiod},
+           given={Manuel},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8febdd93751249828b7992b8bafa5305}{%
+           family={Sánchez-Martínez},
+           familyi={S\bibinithyphendelim M\bibinitperiod},
+           given={Manuel},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {World Scientific Publishing Co. Pte Ltd}%
+      }
+      \strng{namehash}{9213642295dd6f4c01d92124589d993d}
+      \strng{fullhash}{9213642295dd6f4c01d92124589d993d}
+      \strng{bibnamehash}{9213642295dd6f4c01d92124589d993d}
+      \strng{authorbibnamehash}{9213642295dd6f4c01d92124589d993d}
+      \strng{authornamehash}{9213642295dd6f4c01d92124589d993d}
+      \strng{authorfullhash}{9213642295dd6f4c01d92124589d993d}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Information extracted from financial derivatives on interest rates is commonly used to forecast movements in interest rates. However, such an extraction generally assumes that agents are risk-neutral, which is not necessarily the case. Accordingly, it might be useful to account for the agents' risk-aversion when doing these forecasts, which one can implement by adding a risk-correction. In this context, we use TIIE-28 swaps to forecast changes in monetary policy in Mexico, using a set of financial variables to account for the risk-correction. We assess whether models with a risk-correction outperform the TIIE-28 swaps rates, and find that the in-sample explained variability improves when using a risk-correction. Centrally, we document that our main model's out-of-sample forecasts are similar for short horizons (3-month), and statistically significantly better for longer horizons (9 to 24-month), compared to the direct use of TIIE-28 swaps interest rates.}
+      \field{issue}{2}
+      \field{journaltitle}{Quarterly Journal of Finance}
+      \field{title}{{TIIE-28} Swaps as Risk-Adjusted Forecasts of Monetary Policy in {Mexico}}
+      \field{volume}{9}
+      \field{year}{2019}
+      \field{pages}{1\bibrangedash 23}
+      \range{pages}{23}
+      \keyw{TIIE-28,expected monetary policy,interest rates,monetary policy,risk-adjustment,swaps}
+    \endentry
+    \entry{GrilliRoubini:1995}{report}{}
+      \name{author}{2}{}{%
+        {{hash=7bbefe2683d0344dbbb876c936962c9d}{%
+           family={Grilli},
+           familyi={G\bibinitperiod},
+           given={Vittorio},
+           giveni={V\bibinitperiod}}}%
+        {{hash=d7c09c03ff5c303705f248e61a4df17f}{%
+           family={Roubini},
+           familyi={R\bibinitperiod},
+           given={Nouriel},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{a738eed453445aa023959c2378158cfc}
+      \strng{fullhash}{a738eed453445aa023959c2378158cfc}
+      \strng{bibnamehash}{a738eed453445aa023959c2378158cfc}
+      \strng{authorbibnamehash}{a738eed453445aa023959c2378158cfc}
+      \strng{authornamehash}{a738eed453445aa023959c2378158cfc}
+      \strng{authorfullhash}{a738eed453445aa023959c2378158cfc}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper considers the empirical evidence on liquidity effects in open economies; we study the effects of monetary policy shocks (identified by innovations in interest rates) on exchange rates. Both overshooting models with short-run price stickiness and flexible-price models with "liquidity effects" suggest that, in the short-run, the effects of a positive monetary innovation will be a reduction of nominal interest rates and a depreciation of the domestic currency. We consider VAR systems for the G-7 countries and find that, while positive innovations in U.S. interest rates lead to an impact appreciation of the U.S. dollar, positive innovations in the interest rates of the other G-7 countries are associated with an impact depreciation of their currency. We offer two explanations of this "exchange rate puzzle"; one is based on the idea that the U.S. is the "leader" country in the setting of monetary policy for the G-7 area, while the other countries are "follow! ers". The other explanation suggests endogenous policy reaction to underlying inflationary shocks that are a cause of exchange rate depreciation. We then offer some empirical evidence consistent with these two interpretations of the exchange rate puzzle: after controlling for U.S. monetary policies and expected inflation, the response of exchange rates to postive interest rate shocks is a persistent currency appreciation in most of the G-7 countries. Moreover, consistently with both overshooting and liquidity models, a monetary contraction is associated with a transitory appreciation of the real exchange rate and a temporary fall in output.}
+      \field{title}{Liquidity and Exchange Rates: Puzzling Evidence from the {G-7} Countries}
+      \field{type}{Stern School of Business Working Paper}
+      \field{volume}{95-17}
+      \field{year}{1995}
+    \endentry
+    \entry{GSS:2005a}{article}{}
+      \name{author}{3}{}{%
+        {{hash=ec4332733b7a4646219250aa7d409c5b}{%
+           family={Gürkaynak},
+           familyi={G\bibinitperiod},
+           given={Refet\bibnamedelima S.},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=2fa360b7c77a4165a45e19ae82069b7f}{%
+           family={Sack},
+           familyi={S\bibinitperiod},
+           given={Brian\bibnamedelima P.},
+           giveni={B\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=1ff0d64a3f4ed2fa95aa6e29f5c3de95}{%
+           family={Swanson},
+           familyi={S\bibinitperiod},
+           given={Eric\bibnamedelima T.},
+           giveni={E\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {International Journal of Central Banking}%
+      }
+      \strng{namehash}{493753da039d9b46199e9405ddad8589}
+      \strng{fullhash}{493753da039d9b46199e9405ddad8589}
+      \strng{bibnamehash}{493753da039d9b46199e9405ddad8589}
+      \strng{authorbibnamehash}{493753da039d9b46199e9405ddad8589}
+      \strng{authornamehash}{493753da039d9b46199e9405ddad8589}
+      \strng{authorfullhash}{493753da039d9b46199e9405ddad8589}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We investigate the effects of U.S. monetary policy on asset prices using a high-frequency event-study analysis. We test whether these effects are adequately captured by a single factor - changes in the federal funds rate target - and find that they are not. Instead, we find that two factors are required. These factors have a structural interpretation as a current federal funds rate target factor and a future path of policy factor, with the latter closely associated with FOMC statements. We measure the effects of these two factors on bond yields and stock prices using a new intraday dataset going back to 1990. According to our estimates, both monetary policy actions and statements have important but differing effects on asset prices, with statements having a much greater impact on longer-term Treasury yields.}
+      \field{issue}{1}
+      \field{journaltitle}{International Journal of Central Banking}
+      \field{title}{Do Actions Speak Louder Than Words? {The} Response of Asset Prices to Monetary Policy Actions and Statements}
+      \field{volume}{1}
+      \field{year}{2005}
+      \field{pages}{55\bibrangedash 93}
+      \range{pages}{39}
+    \endentry
+    \entry{GurkaynakWright:2013}{article}{}
+      \name{author}{2}{}{%
+        {{hash=ec4332733b7a4646219250aa7d409c5b}{%
+           family={Gürkaynak},
+           familyi={G\bibinitperiod},
+           given={Refet\bibnamedelima S.},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=3dd0466987f8b46207bad516d8f85045}{%
+           family={Wright},
+           familyi={W\bibinitperiod},
+           given={Jonathan\bibnamedelima H.},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{9fe8fc95b9e3f5352a16347a69c4eb7a}
+      \strng{fullhash}{9fe8fc95b9e3f5352a16347a69c4eb7a}
+      \strng{bibnamehash}{9fe8fc95b9e3f5352a16347a69c4eb7a}
+      \strng{authorbibnamehash}{9fe8fc95b9e3f5352a16347a69c4eb7a}
+      \strng{authornamehash}{9fe8fc95b9e3f5352a16347a69c4eb7a}
+      \strng{authorfullhash}{9fe8fc95b9e3f5352a16347a69c4eb7a}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{S1}
+      \field{journaltitle}{The Manchester School}
+      \field{title}{Identification and Inference Using Event Studies}
+      \field{volume}{81}
+      \field{year}{2013}
+      \field{pages}{48\bibrangedash 65}
+      \range{pages}{18}
+    \endentry
+    \entry{HansonStein:2015}{article}{}
+      \name{author}{2}{}{%
+        {{hash=7f19abca9c1c2715c6ead88e9bb46235}{%
+           family={Hanson},
+           familyi={H\bibinitperiod},
+           given={Samuel\bibnamedelima G.},
+           giveni={S\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=575642568e62a6731db350819c4f4dc2}{%
+           family={Stein},
+           familyi={S\bibinitperiod},
+           given={Jeremy\bibnamedelima C.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{1eb0fa1e01c94ba2f3da134f8684d468}
+      \strng{fullhash}{1eb0fa1e01c94ba2f3da134f8684d468}
+      \strng{bibnamehash}{1eb0fa1e01c94ba2f3da134f8684d468}
+      \strng{authorbibnamehash}{1eb0fa1e01c94ba2f3da134f8684d468}
+      \strng{authornamehash}{1eb0fa1e01c94ba2f3da134f8684d468}
+      \strng{authorfullhash}{1eb0fa1e01c94ba2f3da134f8684d468}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Changes in monetary policy have surprisingly strong effects on forward real rates in the distant future. A 100 basis point increase in the two-year nominal yield on a Federal Open Markets Committee announcement day is associated with a 42 basis point increase in the ten-year forward real rate. This finding is at odds with standard macro-models based on sticky nominal prices, which imply that monetary policy cannot move real rates over a horizon longer than that over which all prices in the economy can readjust. Instead, the responsiveness of long-term real rates to monetary shocks appears to reflect changes in term premia. One mechanism that could generate such variation in term premia is based on demand effects due to the existence of what we call yield-oriented investors. We find some evidence supportive of this channel.}
+      \field{issue}{3}
+      \field{journaltitle}{Journal of Financial Economics}
+      \field{title}{Monetary Policy and Long-Term Real Rates}
+      \field{volume}{115}
+      \field{year}{2015}
+      \field{pages}{429\bibrangedash 448}
+      \range{pages}{20}
+      \keyw{Long-term real rates,Monetary policy transmission,Reaching-for-yield}
+    \endentry
+    \entry{HausmanWongswan:2011}{article}{}
+      \name{author}{2}{}{%
+        {{hash=c2cffddd52967df265f50ea036be05f9}{%
+           family={Hausman},
+           familyi={H\bibinitperiod},
+           given={Joshua},
+           giveni={J\bibinitperiod}}}%
+        {{hash=94a0ba81b25cabc4405f282fa145c94c}{%
+           family={Wongswan},
+           familyi={W\bibinitperiod},
+           given={Jon},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{4e17c8c88e931571d58129295ee9c56c}
+      \strng{fullhash}{4e17c8c88e931571d58129295ee9c56c}
+      \strng{bibnamehash}{4e17c8c88e931571d58129295ee9c56c}
+      \strng{authorbibnamehash}{4e17c8c88e931571d58129295ee9c56c}
+      \strng{authornamehash}{4e17c8c88e931571d58129295ee9c56c}
+      \strng{authorfullhash}{4e17c8c88e931571d58129295ee9c56c}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper analyzes the impact of U.S. monetary policy announcement surprises on foreign equity indexes, short- and long-term interest rates, and exchange rates in 49 countries. We use two proxies for monetary policy surprises: the surprise change to the current target federal funds rate (target surprise) and the revision to the expected path of future monetary policy (path surprise). We find that different asset classes respond to different components of the monetary policy surprises. Global equity indexes respond mainly to the target surprise; exchange rates and long-term interest rates respond mainly to the path surprise; and short-term interest rates respond to both surprises. On average, a hypothetical surprise 25-basis-point cut in the federal funds target rate is associated with about a 1 percent increase in foreign equity indexes and a 5 basis point decline in foreign short-term interest rates. A surprise 25-basis-point downward revision in the expected path of future policy is associated with about a 1/2 percent decline in the exchange value of the dollar against foreign currencies and 5 and 8 basis point declines in short- and long-term interest rates, respectively. We also find that asset prices' responses to FOMC announcements vary greatly across countries, and that these cross-country variations in the response are related to a country's exchange rate regime. Equity indexes and interest rates in countries with a less flexible exchange rate regime respond more to U.S. monetary policy surprises. In addition, the cross-country variation in the equity market response is strongly related to the percentage of each country's equity market capitalization owned by U.S. investors. This result suggests that investors' asset holdings may play a role in transmitting monetary policy surprises across countries. © 2011 Elsevier Ltd.}
+      \field{issue}{3}
+      \field{journaltitle}{Journal of International Money and Finance}
+      \field{title}{Global Asset Prices and {FOMC} Announcements}
+      \field{volume}{30}
+      \field{year}{2011}
+      \field{pages}{547\bibrangedash 571}
+      \range{pages}{25}
+      \keyw{Equity markets,Exchange rate regime,Exchange rates,Interest rates,Monetary policy announcements}
+    \endentry
+    \entry{HernandezVega:2021}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c6198187aa0c21198e4df09ab738b96d}{%
+           family={{Hernandez-Vega}},
+           familyi={H\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {University of Dubai}%
+      }
+      \strng{namehash}{c6198187aa0c21198e4df09ab738b96d}
+      \strng{fullhash}{c6198187aa0c21198e4df09ab738b96d}
+      \strng{bibnamehash}{c6198187aa0c21198e4df09ab738b96d}
+      \strng{authorbibnamehash}{c6198187aa0c21198e4df09ab738b96d}
+      \strng{authornamehash}{c6198187aa0c21198e4df09ab738b96d}
+      \strng{authorfullhash}{c6198187aa0c21198e4df09ab738b96d}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We study how unconventional monetary policy announcements affected the entry of foreign investment in debt and equity in Mexico, placing special focus on announcements related to the third QE program and the taper tantrum episode. A novel dataset on daily debt and equity flows, that maps Balance of Payments data quite well, allows this paper to provide a better insight into movements of capital. The results suggest that both equity and debt flows reacted immediately to unexpected U.S. monetary policy announcements, particularly if these are considered as bad news by investors. In turn, results using weekly data support the idea that investors interested in fixed income instruments move more prudently than those interested in equity which react quickly.}
+      \field{issue}{4}
+      \field{journaltitle}{Journal of Research in Emerging Markets}
+      \field{month}{9}
+      \field{title}{Portfolio investment and {U.S.} monetary policy announcements: An event study analysis using high-frequency data from {Mexico}}
+      \field{volume}{3}
+      \field{year}{2021}
+      \field{pages}{1\bibrangedash 22}
+      \range{pages}{22}
+      \keyw{Capital Flows,Foreign Portfolio Investment,Mexican Equity and Bond Market,Unconventional Monetary Policies,foreign portfolio investment,mexican equity and bond market JEL codes: E4,monetary policy announcements,unconventional monetary policies,capital flows}
+    \endentry
+    \entry{KearnsManners:2006}{article}{}
+      \name{author}{2}{}{%
+        {{hash=18e3374ce3d376e3d2daa5e89b175349}{%
+           family={Kearns},
+           familyi={K\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=39dec79c5377cba0205e1ccf3f7abe33}{%
+           family={Manners},
+           familyi={M\bibinitperiod},
+           given={Phil},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{9ea1db08151ec3172fbeedfcfa875d6e}
+      \strng{fullhash}{9ea1db08151ec3172fbeedfcfa875d6e}
+      \strng{bibnamehash}{9ea1db08151ec3172fbeedfcfa875d6e}
+      \strng{authorbibnamehash}{9ea1db08151ec3172fbeedfcfa875d6e}
+      \strng{authornamehash}{9ea1db08151ec3172fbeedfcfa875d6e}
+      \strng{authorfullhash}{9ea1db08151ec3172fbeedfcfa875d6e}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We investigate the impact of monetary policy on the exchange rate using an event study with intraday data for four countries. Carefully selecting the sample periods ensures that the policy change is exogenous to the exchange rate. An unanticipated tightening of 25 basis points leads to a rapid appreciation of around 0.35 percent. We also show that the impact depends on how the surprise affects expectations of future monetary policy. If expectations of future policy are revised by the full amount of the surprise, then the impact on the exchange rate is larger (0.4 percent) than if the surprise only brings forward an anticipated change in policy (0.2 percent).}
+      \field{issue}{4}
+      \field{journaltitle}{International Journal of Central Banking}
+      \field{title}{The Impact of Monetary Policy on the Exchange Rate: A Study Using Intraday Data}
+      \field{volume}{2}
+      \field{year}{2006}
+      \field{pages}{157\bibrangedash 183}
+      \range{pages}{27}
+      \keyw{basis point,credit channel,economic policy,economics,event study,exchange rate,macroeconomics,monetary economics,monetary policy,surprise}
+    \endentry
+    \entry{KearnsSchrimpfXia:2018}{report}{}
+      \name{author}{3}{}{%
+        {{hash=18e3374ce3d376e3d2daa5e89b175349}{%
+           family={Kearns},
+           familyi={K\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=08ecbebba2479a0bce04c84343030dd4}{%
+           family={Schrimpf},
+           familyi={S\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=97a303e44cfd45bc0fc9e94c535a590e}{%
+           family={Xia},
+           familyi={X\bibinitperiod},
+           given={Fan\bibnamedelima Dora},
+           giveni={F\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{c3bf7c3812fde9658c42ca3ae7b2326e}
+      \strng{fullhash}{c3bf7c3812fde9658c42ca3ae7b2326e}
+      \strng{bibnamehash}{c3bf7c3812fde9658c42ca3ae7b2326e}
+      \strng{authorbibnamehash}{c3bf7c3812fde9658c42ca3ae7b2326e}
+      \strng{authornamehash}{c3bf7c3812fde9658c42ca3ae7b2326e}
+      \strng{authorfullhash}{c3bf7c3812fde9658c42ca3ae7b2326e}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Using monetary policy shocks for seven advanced economy central banks, measured at high-frequency, we accurately document the extent of interest rate spillovers to 47 advanced and emerging market economies. Our main goal is to assess different channels through which spillovers occur and why some countries' interest rates respond more than others. We find that there is no evidence that spillovers relate to real linkages, such as trade flows. There is some indication that exchange rate regimes influence the extent of spillovers. By far the strongest determinant of interest rate spillovers is financial openness. Countries that have stronger bilateral (and aggregate) financial links with the US or euro area are susceptible to stronger interest rate spillovers. These effects are much more pronounced at the longer end of the yield curve, indicating that while countries retain policy rate independence, financial conditions are influenced by global yields.}
+      \field{title}{Explaining Monetary Spillovers: The Matrix Reloaded}
+      \field{type}{BIS Working Paper No. 757}
+      \field{year}{2018}
+      \keyw{Financial Integration,High-frequency Data,Monetary Policy Spillovers}
+    \endentry
+    \entry{KimLim:2016}{report}{}
+      \name{author}{2}{}{%
+        {{hash=3b813901eb439076e342fc28093a8f06}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Soyoung},
+           giveni={S\bibinitperiod}}}%
+        {{hash=17f701de9c1b052d75de6defd6629e47}{%
+           family={Lim},
+           familyi={L\bibinitperiod},
+           given={Kuntae},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{c3d730af9c7b2b4f37ecb30a0d1870f9}
+      \strng{fullhash}{c3d730af9c7b2b4f37ecb30a0d1870f9}
+      \strng{bibnamehash}{c3d730af9c7b2b4f37ecb30a0d1870f9}
+      \strng{authorbibnamehash}{c3d730af9c7b2b4f37ecb30a0d1870f9}
+      \strng{authornamehash}{c3d730af9c7b2b4f37ecb30a0d1870f9}
+      \strng{authorfullhash}{c3d730af9c7b2b4f37ecb30a0d1870f9}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This study empirically investigates the effects of monetary policy shocks on the exchange rate in six emerging countries (Korea, Thailand, the Philippines, Mexico, Brazil, and Colombia). VAR models are used, wherein sign restrictions on impulse responses are imposed to identify monetary policy shocks. The empirical model reflects the small open emerging economy features. The estimation period is the recent period in which these countries adopted inflation targeting and more flexible exchange rate regimes based on the experience of advanced countries. The main findings are as follows. First, various puzzles such as the ¡°exchange rate puzzle,¡± ¡°delayed overshooting puzzle,¡± and ¡°forward discount bias puzzle¡± are frequently found in these countries. Second, more severe puzzles are found in these emerging countries than in small open advanced countries.}
+      \field{title}{Effects of Monetary Policy Shocks on Exchange Rate in Emerging Countries}
+      \field{type}{Hong Kong Institute for Monetary Research Working Paper No. 19}
+      \field{year}{2016}
+      \keyw{Delayed Overshooting,Exchange Rate,Monetary Policy Shocks,UIP Condition,VAR}
+    \endentry
+    \entry{Kohlscheen:2014}{article}{}
+      \name{author}{1}{}{%
+        {{hash=e117a56170a5ad2da72d92476622e642}{%
+           family={Kohlscheen},
+           familyi={K\bibinitperiod},
+           given={Emanuel},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{e117a56170a5ad2da72d92476622e642}
+      \strng{fullhash}{e117a56170a5ad2da72d92476622e642}
+      \strng{bibnamehash}{e117a56170a5ad2da72d92476622e642}
+      \strng{authorbibnamehash}{e117a56170a5ad2da72d92476622e642}
+      \strng{authornamehash}{e117a56170a5ad2da72d92476622e642}
+      \strng{authorfullhash}{e117a56170a5ad2da72d92476622e642}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This study investigates the impact of monetary policy shocks on the exchange rates of Brazil, Mexico and Chile. We find that even a focus on 1 day exchange rate changes following policy events - which reduces the potential for reverse causality considerably - fails to lend support for the view that associates unexpected interest rate hikes with immediate appreciations. This lack of empirical backing for the predictions of standard open economy models persists irrespective of whether we use the US Dollar or effective exchange rates, whether changes in the policy rate that were followed by exchange rate interventions are excluded, whether "contaminated" events are dropped from the analysis or whether we allow for non-linearities. We argue that it is difficult to attribute this stronger version of the exchange rate puzzle to fiscal dominance, as unexpected rate increases are not associated with increases in risk premia, and similar results are obtained in the case of Chile - a country that has had the highest possible short-term credit rating since 1995 and a debt/GDP ratio below 10\%.}
+      \field{journaltitle}{Journal of International Money and Finance}
+      \field{title}{The Impact of Monetary Policy on the Exchange Rate: A High Frequency Exchange Rate Puzzle in Emerging Economies}
+      \field{volume}{44}
+      \field{year}{2014}
+      \field{pages}{69\bibrangedash 96}
+      \range{pages}{28}
+      \keyw{Event study,Exchange rate,Fiscal dominance,Interest rate,Monetary policy}
+    \endentry
+    \entry{Kuttner:2001}{article}{}
+      \name{author}{1}{}{%
+        {{hash=54ff9b53681f66adba88d267f7a05e67}{%
+           family={Kuttner},
+           familyi={K\bibinitperiod},
+           given={Kenneth\bibnamedelima N.},
+           giveni={K\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \strng{namehash}{54ff9b53681f66adba88d267f7a05e67}
+      \strng{fullhash}{54ff9b53681f66adba88d267f7a05e67}
+      \strng{bibnamehash}{54ff9b53681f66adba88d267f7a05e67}
+      \strng{authorbibnamehash}{54ff9b53681f66adba88d267f7a05e67}
+      \strng{authornamehash}{54ff9b53681f66adba88d267f7a05e67}
+      \strng{authorfullhash}{54ff9b53681f66adba88d267f7a05e67}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper estimates the impact of monetary policy actions on bill, note, and bond yields, using data from the futures market for Federal funds to separate changes in the target funds rate into anticipated and unanticipated components. Interest rates' response to anticipated target rate changes is small, while their response to unanticipated changes is large and highly significant. These responses are generally consistent with the expectations hypothesis of the term structure. Surprise target rate changes have little effect on expectations of future actions, however, which helps to explain the lack of empirical support for the expectations hypothesis at the short end of the yield curve.}
+      \field{issue}{3}
+      \field{journaltitle}{Journal of Monetary Economics}
+      \field{title}{Monetary Policy Surprises and Interest Rates: Evidence from the Fed Funds Futures Market}
+      \field{volume}{47}
+      \field{year}{2001}
+      \field{pages}{523\bibrangedash 544}
+      \range{pages}{22}
+      \keyw{E4,Fed funds futures,G1,Monetary policy,Term structure of interest rates}
+    \endentry
+    \entry{Lloyd:2018a}{report}{}
+      \name{author}{1}{}{%
+        {{hash=1a6808d85cf21384444e55ec91f9d9c9}{%
+           family={Lloyd},
+           familyi={L\bibinitperiod},
+           given={Simon\bibnamedelima P.},
+           giveni={S\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{1a6808d85cf21384444e55ec91f9d9c9}
+      \strng{fullhash}{1a6808d85cf21384444e55ec91f9d9c9}
+      \strng{bibnamehash}{1a6808d85cf21384444e55ec91f9d9c9}
+      \strng{authorbibnamehash}{1a6808d85cf21384444e55ec91f9d9c9}
+      \strng{authornamehash}{1a6808d85cf21384444e55ec91f9d9c9}
+      \strng{authorfullhash}{1a6808d85cf21384444e55ec91f9d9c9}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{I assess the use of overnight indexed swap (OIS) rates as measures of monetary policy expectations. I find that one to twelve-month US OIS rates provide measures of investors’ interest rate expectations that are comparable to those from corresponding-horizon federal funds futures rates, which have regularly been used as financial market-based measures of US interest rate expectations. More generally, I find that one to 24-month US, euro-zone and Japanese OIS rates and one to 18-month UK OIS rates tend to accurately measure expectations of future short-term interest rates. Motivated by these results, researchers can look to OIS rates as globally comparable measures of monetary policy expectations.}
+      \field{title}{Overnight Index Swap Market-Based Measures of Monetary Policy Expectations}
+      \field{type}{Bank of England Working Paper No. 709}
+      \field{year}{2018}
+    \endentry
+    \entry{NakamuraSteinsson:2018JEP}{article}{}
+      \name{author}{2}{}{%
+        {{hash=ef80022dca97c9339f14429d0aa7eb82}{%
+           family={Nakamura},
+           familyi={N\bibinitperiod},
+           given={Emi},
+           giveni={E\bibinitperiod}}}%
+        {{hash=7fc943bb8bcc8390269e9da3fedc0db1}{%
+           family={Steinsson},
+           familyi={S\bibinitperiod},
+           given={Jón},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{c6d294fcbe279521e3541981060c2229}
+      \strng{fullhash}{c6d294fcbe279521e3541981060c2229}
+      \strng{bibnamehash}{c6d294fcbe279521e3541981060c2229}
+      \strng{authorbibnamehash}{c6d294fcbe279521e3541981060c2229}
+      \strng{authornamehash}{c6d294fcbe279521e3541981060c2229}
+      \strng{authorfullhash}{c6d294fcbe279521e3541981060c2229}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{3}
+      \field{journaltitle}{Journal of Economic Perspectives}
+      \field{title}{Identification in Macroeconomics}
+      \field{volume}{32}
+      \field{year}{2018}
+      \field{pages}{59\bibrangedash 86}
+      \range{pages}{28}
+    \endentry
+    \entry{PenningsRamayandiTang:2015}{article}{}
+      \name{author}{3}{}{%
+        {{hash=19629a282adeb9e9ecc07529a911a67a}{%
+           family={Pennings},
+           familyi={P\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b065fce99d7f6f1148879ae7c5780598}{%
+           family={Ramayandi},
+           familyi={R\bibinitperiod},
+           given={Arief},
+           giveni={A\bibinitperiod}}}%
+        {{hash=6959aa5cad345e7add88e7b000d6e1b0}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={Hsiao\bibnamedelima Chink},
+           giveni={H\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{b84a423de0ad31dd8c0a0de02f675bf8}
+      \strng{fullhash}{b84a423de0ad31dd8c0a0de02f675bf8}
+      \strng{bibnamehash}{b84a423de0ad31dd8c0a0de02f675bf8}
+      \strng{authorbibnamehash}{b84a423de0ad31dd8c0a0de02f675bf8}
+      \strng{authornamehash}{b84a423de0ad31dd8c0a0de02f675bf8}
+      \strng{authorfullhash}{b84a423de0ad31dd8c0a0de02f675bf8}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper estimates the impact of monetary policy on exchange rates and stock prices of eight small open economies: Australia, Canada, the Republic of Korea, New Zealand, the United Kingdom, Indonesia, Malaysia, and Thailand. On average across these countries in the full sample, a one percentage point surprise rise in official interest rates leads to a 1\% appreciation of the exchange rate and a 0.5-1\% fall in stock prices, with somewhat stronger effects in OECD countries than non-OECD countries (though differences are sometimes not significant). We find little robust evidence of a change in the effect of monetary policy surprises during the recent financial crisis.}
+      \field{journaltitle}{Journal of Macroeconomics}
+      \field{title}{The Impact of Monetary Policy on Financial Markets in Small Open Economies: More or Less Effective During the Global Financial Crisis?}
+      \field{volume}{44}
+      \field{year}{2015}
+      \field{pages}{60\bibrangedash 70}
+      \range{pages}{11}
+      \keyw{Asian economies,Crisis,Exchange rates,Monetary policy effectiveness,Stock prices}
+    \endentry
+    \entry{PiazzesiSwanson:2008}{article}{}
+      \name{author}{2}{}{%
+        {{hash=bf7df76b8a9f8a96600649e066f5ab70}{%
+           family={Piazzesi},
+           familyi={P\bibinitperiod},
+           given={Monika},
+           giveni={M\bibinitperiod}}}%
+        {{hash=1ff0d64a3f4ed2fa95aa6e29f5c3de95}{%
+           family={Swanson},
+           familyi={S\bibinitperiod},
+           given={Eric\bibnamedelima T.},
+           giveni={E\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \strng{namehash}{883d8717eb46c7b5739727c5e36365d4}
+      \strng{fullhash}{883d8717eb46c7b5739727c5e36365d4}
+      \strng{bibnamehash}{883d8717eb46c7b5739727c5e36365d4}
+      \strng{authorbibnamehash}{883d8717eb46c7b5739727c5e36365d4}
+      \strng{authornamehash}{883d8717eb46c7b5739727c5e36365d4}
+      \strng{authorfullhash}{883d8717eb46c7b5739727c5e36365d4}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Many researchers have used federal funds futures rates as measures of financial markets' expectations of future monetary policy. However, to the extent that federal funds futures reflect risk premia, these measures require some adjustment. In this paper, we document that excess returns on federal funds futures have been positive on average and strongly countercyclical. In particular, excess returns are surprisingly well predicted by macroeconomic indicators such as employment growth and financial business-cycle indicators such as Treasury yield spreads and corporate bond spreads. Excess returns on eurodollar futures display similar patterns. We document that simply ignoring these risk premia significantly biases forecasts of the future path of monetary policy. We also show that risk premia matter for some futures-based measures of monetary policy shocks used in the literature. © 2008 Elsevier B.V. All rights reserved.}
+      \field{issue}{4}
+      \field{journaltitle}{Journal of Monetary Economics}
+      \field{title}{Futures Prices as Risk-Adjusted Forecasts of Monetary Policy}
+      \field{volume}{55}
+      \field{year}{2008}
+      \field{pages}{677\bibrangedash 691}
+      \range{pages}{15}
+      \keyw{Federal funds futures,Monetary policy,Risk premia}
+    \endentry
+    \entry{Pischke:2007}{report}{}
+      \name{author}{1}{}{%
+        {{hash=8f54ed1f1baff61eaa9af8bc9b533709}{%
+           family={Pischke},
+           familyi={P\bibinitperiod},
+           given={Steve},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{8f54ed1f1baff61eaa9af8bc9b533709}
+      \strng{fullhash}{8f54ed1f1baff61eaa9af8bc9b533709}
+      \strng{bibnamehash}{8f54ed1f1baff61eaa9af8bc9b533709}
+      \strng{authorbibnamehash}{8f54ed1f1baff61eaa9af8bc9b533709}
+      \strng{authornamehash}{8f54ed1f1baff61eaa9af8bc9b533709}
+      \strng{authorfullhash}{8f54ed1f1baff61eaa9af8bc9b533709}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{These notes summarize a variety of simple results on measurement error which I find useful. They also provide some references where more complete results and applications can be found.}
+      \field{title}{Lecture Notes on Measurement Error}
+      \field{type}{Manuscript}
+      \field{year}{2007}
+    \endentry
+    \entry{Rey:2013}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=0831f012d6f4c95339341fe3ec7cc5ea}{%
+           family={Rey},
+           familyi={R\bibinitperiod},
+           given={Hélène},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{0831f012d6f4c95339341fe3ec7cc5ea}
+      \strng{fullhash}{0831f012d6f4c95339341fe3ec7cc5ea}
+      \strng{bibnamehash}{0831f012d6f4c95339341fe3ec7cc5ea}
+      \strng{authorbibnamehash}{0831f012d6f4c95339341fe3ec7cc5ea}
+      \strng{authornamehash}{0831f012d6f4c95339341fe3ec7cc5ea}
+      \strng{authorfullhash}{0831f012d6f4c95339341fe3ec7cc5ea}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{There is a global financial cycle in capital flows, asset prices and in credit growth. This cycle co‐moves with the VIX, a measure of uncertainty and risk aversion of the markets. Asset markets in countries with more credit inflows are more sensitive to the global cycle. The global financial cycle is not aligned with countries’ specific macroeconomic conditions. Symptoms can go from benign to large asset price bubbles and excess credit creation, which are among the best predictors of financial crises. A VAR analysis suggests that one of the determinants of the global financial cycle is monetary policy in the centre country, which affects leverage of global banks, capital flows and credit growth in the international financial system. Whenever capital is freely mobile, the global financial cycle constrains national monetary policies regardless of the exchange rate regime.}
+      \field{booktitle}{Proceedings of the Jackson Hole Symposium}
+      \field{title}{Dilemma not Trilemma: The Global Financial Cycle and Monetary Policy Independence}
+      \field{year}{2013}
+      \field{pages}{285\bibrangedash 333}
+      \range{pages}{49}
+    \endentry
+    \entry{Rosa:2011JBF}{article}{}
+      \name{author}{1}{}{%
+        {{hash=47539fbd91f0667a04b4116d1ef1ec23}{%
+           family={Rosa},
+           familyi={R\bibinitperiod},
+           given={Carlo},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier B.V.}%
+      }
+      \strng{namehash}{47539fbd91f0667a04b4116d1ef1ec23}
+      \strng{fullhash}{47539fbd91f0667a04b4116d1ef1ec23}
+      \strng{bibnamehash}{47539fbd91f0667a04b4116d1ef1ec23}
+      \strng{authorbibnamehash}{47539fbd91f0667a04b4116d1ef1ec23}
+      \strng{authornamehash}{47539fbd91f0667a04b4116d1ef1ec23}
+      \strng{authorfullhash}{47539fbd91f0667a04b4116d1ef1ec23}
+      \field{extraname}{1}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper investigates the impact of US monetary policy on the level and volatility of exchange rates using an event study with intraday data for five currencies (the US dollar exchange rate versus the euro, the Canadian dollar, the British pound, the Swiss franc, and the Japanese yen). I construct two indicators of news about monetary policy stemming separately from policy decisions and from balance of risk statements. Estimation results show that both policy decisions and communication have economically large and highly significant effects on the exchange rates, with the surprise component of statements accounting for most of the explainable variation in exchange rate returns in response to monetary policy. This paper also shows that exchange rates tend to absorb FOMC monetary surprises within 30-40. min from the announcement release. © 2010 Elsevier B.V.}
+      \field{issue}{2}
+      \field{journaltitle}{Journal of Banking and Finance}
+      \field{title}{The High-Frequency Response of Exchange Rates to Monetary Policy Actions and Statements}
+      \field{volume}{35}
+      \field{year}{2011}
+      \field{pages}{478\bibrangedash 489}
+      \range{pages}{12}
+      \keyw{Central bank communication,High-frequency exchange rates,Monetary policy shocks,News shocks,US Federal Reserve}
+    \endentry
+    \entry{Rosa:2011Eco}{article}{}
+      \name{author}{1}{}{%
+        {{hash=47539fbd91f0667a04b4116d1ef1ec23}{%
+           family={Rosa},
+           familyi={R\bibinitperiod},
+           given={Carlo},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{47539fbd91f0667a04b4116d1ef1ec23}
+      \strng{fullhash}{47539fbd91f0667a04b4116d1ef1ec23}
+      \strng{bibnamehash}{47539fbd91f0667a04b4116d1ef1ec23}
+      \strng{authorbibnamehash}{47539fbd91f0667a04b4116d1ef1ec23}
+      \strng{authornamehash}{47539fbd91f0667a04b4116d1ef1ec23}
+      \strng{authorfullhash}{47539fbd91f0667a04b4116d1ef1ec23}
+      \field{extraname}{2}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper documents the effects of changes in US monetary policy on asset prices in 51 countries to evaluate the validity of the event-study approach. We find that the event-study estimates contain a significant bias. However, this bias is fairly small and the ordinary least squares approach tends to outperform in an expected squared error sense the heteroscedasticity-based estimator for both small and large sample sizes. Hence in general the event-study methodology should be preferred. Moreover, we show that US monetary policy has been an important determinant of global financial markets. © The Author. Economica © 2009 The London School of Economics and Political Science.}
+      \field{issue}{311}
+      \field{journaltitle}{Economica}
+      \field{title}{The Validity of the Event-Study Approach: Evidence from the Impact of the {Fed's} Monetary Policy on {US} and Foreign Asset Prices}
+      \field{volume}{78}
+      \field{year}{2011}
+      \field{pages}{429\bibrangedash 439}
+      \range{pages}{11}
+    \endentry
+    \entry{SidaouiRF:2008}{report}{}
+      \name{author}{2}{}{%
+        {{hash=e47599cd9a5e91b8dbce13b25f3c85f4}{%
+           family={Sidaoui},
+           familyi={S\bibinitperiod},
+           given={José\bibnamedelima J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=dea7b16fd31707bc9862c70ed3d33e5f}{%
+           family={Ramos-Francia},
+           familyi={R\bibinithyphendelim F\bibinitperiod},
+           given={Manuel},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{c568c00b1e484818924017a7e2eadb96}
+      \strng{fullhash}{c568c00b1e484818924017a7e2eadb96}
+      \strng{bibnamehash}{c568c00b1e484818924017a7e2eadb96}
+      \strng{authorbibnamehash}{c568c00b1e484818924017a7e2eadb96}
+      \strng{authornamehash}{c568c00b1e484818924017a7e2eadb96}
+      \strng{authorfullhash}{c568c00b1e484818924017a7e2eadb96}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Monetary Transmission Mechanism in {Mexico}: Recent Developments}
+      \field{type}{BIS Papers No. 35}
+      \field{year}{2008}
+      \field{pages}{363\bibrangedash 394}
+      \range{pages}{32}
+    \endentry
+    \entry{Solis:2F}{report}{}
+      \name{author}{1}{}{%
+        {{hash=08819225237d58e31e20005166b77248}{%
+           family={Solís},
+           familyi={S\bibinitperiod},
+           given={Pavel},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{08819225237d58e31e20005166b77248}
+      \strng{fullhash}{08819225237d58e31e20005166b77248}
+      \strng{bibnamehash}{08819225237d58e31e20005166b77248}
+      \strng{authorbibnamehash}{08819225237d58e31e20005166b77248}
+      \strng{authornamehash}{08819225237d58e31e20005166b77248}
+      \strng{authorfullhash}{08819225237d58e31e20005166b77248}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Price and Quantity Effects of Monetary Policy Actions and Statements in an Emerging Economy}
+      \field{type}{Manuscript}
+      \field{year}{2021}
+    \endentry
+    \entry{Wright:2012}{article}{}
+      \name{author}{1}{}{%
+        {{hash=3dd0466987f8b46207bad516d8f85045}{%
+           family={Wright},
+           familyi={W\bibinitperiod},
+           given={Jonathan\bibnamedelima H.},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{3dd0466987f8b46207bad516d8f85045}
+      \strng{fullhash}{3dd0466987f8b46207bad516d8f85045}
+      \strng{bibnamehash}{3dd0466987f8b46207bad516d8f85045}
+      \strng{authorbibnamehash}{3dd0466987f8b46207bad516d8f85045}
+      \strng{authornamehash}{3dd0466987f8b46207bad516d8f85045}
+      \strng{authorfullhash}{3dd0466987f8b46207bad516d8f85045}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This article uses a structural VAR with daily data to identify the effects of monetary policy shocks on various longer term interest rates since the federal funds rate has been stuck at the zero lower bound. The VAR is identified using the assumption that monetary policy shocks are heteroskedastic: monetary policy shocks have especially high variance on days of FOMC meetings and certain speeches, while there is otherwise nothing unusual about these days. A complementary high-frequency event-study approach is also used. I find that stimulative monetary policy shocks lower Treasury and corporate bond yields but the effects die off fairly fast. © 2012 Royal Economic Society.}
+      \field{issue}{564}
+      \field{journaltitle}{Economic Journal}
+      \field{title}{What Does Monetary Policy Do to Long-Term Interest Rates at the Zero Lower Bound?}
+      \field{volume}{122}
+      \field{year}{2012}
+      \field{pages}{F447\bibrangedash F466}
+      \range{pages}{-1}
+    \endentry
+    \entry{Zettelmeyer:2004}{article}{}
+      \name{author}{1}{}{%
+        {{hash=98aabf42a387b190e7bafaa304915f4b}{%
+           family={Zettelmeyer},
+           familyi={Z\bibinitperiod},
+           given={Jeromin},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{98aabf42a387b190e7bafaa304915f4b}
+      \strng{fullhash}{98aabf42a387b190e7bafaa304915f4b}
+      \strng{bibnamehash}{98aabf42a387b190e7bafaa304915f4b}
+      \strng{authorbibnamehash}{98aabf42a387b190e7bafaa304915f4b}
+      \strng{authornamehash}{98aabf42a387b190e7bafaa304915f4b}
+      \strng{authorfullhash}{98aabf42a387b190e7bafaa304915f4b}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper studies the impact effect of monetary policy shocks on the exchange rate in Australia, Canada, and New Zealand during the 1990s. Shocks are identified by the reaction of three month market interest rates to policy announcements that were not themselves endogenous to economic news on the same day. The main result is that a 100 basis point contractionary shock will appreciate the exchange rate by 2-3 percent on impact. The association of interest rate hikes with depreciations that is sometimes observed during periods of exchange market pressure is mainly attributable to reverse causality. © 2004 Elsevier B.V. All rights reserved.}
+      \field{issue}{3}
+      \field{journaltitle}{Journal of Monetary Economics}
+      \field{title}{The Impact of Monetary Policy on the Exchange Rate: Evidence from Three Small Open Economies}
+      \field{volume}{51}
+      \field{year}{2004}
+      \field{pages}{635\bibrangedash 652}
+      \range{pages}{18}
+      \keyw{Exchange rates,Interest rates,Monetary policy}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
