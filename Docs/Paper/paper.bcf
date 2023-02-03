@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bcf:controlfile version="3.7" bltxversion="3.16" xmlns:bcf="https://sourceforge.net/projects/biblatex">
+<bcf:controlfile version="3.9" bltxversion="3.18b" xmlns:bcf="https://sourceforge.net/projects/biblatex">
   <!-- BIBER OPTIONS -->
   <bcf:options component="biber" type="global">
     <bcf:option type="singlevalued">
@@ -135,6 +135,10 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>nosortothers</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>pluralothers</bcf:key>
       <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
@@ -372,11 +376,11 @@
       <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
-      <bcf:key>skiplab</bcf:key>
+      <bcf:key>skipbiblist</bcf:key>
       <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
-      <bcf:key>skipbiblist</bcf:key>
+      <bcf:key>skiplab</bcf:key>
       <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
@@ -601,6 +605,7 @@
     <bcf:option datatype="boolean">labeltitle</bcf:option>
     <bcf:option datatype="boolean">labeltitleyear</bcf:option>
     <bcf:option datatype="boolean">labeldateparts</bcf:option>
+    <bcf:option datatype="boolean">pluralothers</bcf:option>
     <bcf:option datatype="boolean">nohashothers</bcf:option>
     <bcf:option datatype="boolean">nosortothers</bcf:option>
     <bcf:option datatype="boolean">noroman</bcf:option>
@@ -1067,7 +1072,7 @@
     <bcf:namepart order="3">given</bcf:namepart>
   </bcf:uniquenametemplate>
   <!-- SORTING NAME KEY TEMPLATES -->
-  <bcf:sortingnamekeytemplate name="global">
+  <bcf:sortingnamekeytemplate name="global" visibility="sort">
     <bcf:keypart order="1">
       <bcf:part type="namepart" order="1" use="1">prefix</bcf:part>
       <bcf:part type="namepart" order="2">family</bcf:part>
@@ -1272,14 +1277,14 @@
       <bcf:field fieldtype="field" datatype="datepart">minute</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">second</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">timezone</bcf:field>
-      <bcf:field fieldtype="field" datatype="datepart">season</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">yeardivision</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">endmonth</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">endday</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">endhour</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">endminute</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">endsecond</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">endtimezone</bcf:field>
-      <bcf:field fieldtype="field" datatype="datepart">endseason</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">endyeardivision</bcf:field>
       <bcf:field fieldtype="field" datatype="date" skip_output="true">eventdate</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart" nullok="true">eventendyear</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart" nullok="true">eventyear</bcf:field>
@@ -1289,14 +1294,14 @@
       <bcf:field fieldtype="field" datatype="datepart">eventminute</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">eventsecond</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">eventtimezone</bcf:field>
-      <bcf:field fieldtype="field" datatype="datepart">eventseason</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">eventyeardivision</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">eventendmonth</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">eventendday</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">eventendhour</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">eventendminute</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">eventendsecond</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">eventendtimezone</bcf:field>
-      <bcf:field fieldtype="field" datatype="datepart">eventendseason</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">eventendyeardivision</bcf:field>
       <bcf:field fieldtype="field" datatype="date" skip_output="true">origdate</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart" nullok="true">origendyear</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart" nullok="true">origyear</bcf:field>
@@ -1306,14 +1311,14 @@
       <bcf:field fieldtype="field" datatype="datepart">origminute</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">origsecond</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">origtimezone</bcf:field>
-      <bcf:field fieldtype="field" datatype="datepart">origseason</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">origyeardivision</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">origendmonth</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">origendday</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">origendhour</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">origendminute</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">origendsecond</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">origendtimezone</bcf:field>
-      <bcf:field fieldtype="field" datatype="datepart">origendseason</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">origendyeardivision</bcf:field>
       <bcf:field fieldtype="field" datatype="date" skip_output="true">urldate</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart" nullok="true">urlendyear</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart" nullok="true">urlyear</bcf:field>
@@ -1323,14 +1328,14 @@
       <bcf:field fieldtype="field" datatype="datepart">urlminute</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">urlsecond</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">urltimezone</bcf:field>
-      <bcf:field fieldtype="field" datatype="datepart">urlseason</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">urlyeardivision</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">urlendmonth</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">urlendday</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">urlendhour</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">urlendminute</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">urlendsecond</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">urlendtimezone</bcf:field>
-      <bcf:field fieldtype="field" datatype="datepart">urlendseason</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">urlendyeardivision</bcf:field>
       <bcf:field fieldtype="field" datatype="verbatim">doi</bcf:field>
       <bcf:field fieldtype="field" datatype="verbatim">eprint</bcf:field>
       <bcf:field fieldtype="field" datatype="verbatim">file</bcf:field>
@@ -1363,10 +1368,10 @@
       <bcf:field>endhour</bcf:field>
       <bcf:field>endminute</bcf:field>
       <bcf:field>endmonth</bcf:field>
-      <bcf:field>endseason</bcf:field>
       <bcf:field>endsecond</bcf:field>
       <bcf:field>endtimezone</bcf:field>
       <bcf:field>endyear</bcf:field>
+      <bcf:field>endyeardivision</bcf:field>
       <bcf:field>entryset</bcf:field>
       <bcf:field>entrysubtype</bcf:field>
       <bcf:field>execute</bcf:field>
@@ -1405,17 +1410,17 @@
       <bcf:field>origendhour</bcf:field>
       <bcf:field>origendminute</bcf:field>
       <bcf:field>origendmonth</bcf:field>
-      <bcf:field>origendseason</bcf:field>
       <bcf:field>origendsecond</bcf:field>
       <bcf:field>origendtimezone</bcf:field>
       <bcf:field>origendyear</bcf:field>
+      <bcf:field>origendyeardivision</bcf:field>
       <bcf:field>orighour</bcf:field>
       <bcf:field>origminute</bcf:field>
       <bcf:field>origmonth</bcf:field>
-      <bcf:field>origseason</bcf:field>
       <bcf:field>origsecond</bcf:field>
       <bcf:field>origtimezone</bcf:field>
       <bcf:field>origyear</bcf:field>
+      <bcf:field>origyeardivision</bcf:field>
       <bcf:field>origlocation</bcf:field>
       <bcf:field>origpublisher</bcf:field>
       <bcf:field>origtitle</bcf:field>
@@ -1425,7 +1430,6 @@
       <bcf:field>relatedoptions</bcf:field>
       <bcf:field>relatedstring</bcf:field>
       <bcf:field>relatedtype</bcf:field>
-      <bcf:field>season</bcf:field>
       <bcf:field>second</bcf:field>
       <bcf:field>shortauthor</bcf:field>
       <bcf:field>shorteditor</bcf:field>
@@ -1467,6 +1471,7 @@
       <bcf:field>xdata</bcf:field>
       <bcf:field>xref</bcf:field>
       <bcf:field>year</bcf:field>
+      <bcf:field>yeardivision</bcf:field>
     </bcf:entryfields>
     <bcf:entryfields>
       <bcf:entrytype>set</bcf:entrytype>
@@ -1895,12 +1900,12 @@
       <bcf:field>note</bcf:field>
       <bcf:field>number</bcf:field>
       <bcf:field>pubstate</bcf:field>
-      <bcf:field>season</bcf:field>
       <bcf:field>series</bcf:field>
       <bcf:field>subtitle</bcf:field>
       <bcf:field>title</bcf:field>
       <bcf:field>titleaddon</bcf:field>
       <bcf:field>volume</bcf:field>
+      <bcf:field>yeardivision</bcf:field>
     </bcf:entryfields>
     <bcf:entryfields>
       <bcf:entrytype>mvproceedings</bcf:entrytype>
@@ -1912,17 +1917,17 @@
       <bcf:field>eventendhour</bcf:field>
       <bcf:field>eventendminute</bcf:field>
       <bcf:field>eventendmonth</bcf:field>
-      <bcf:field>eventendseason</bcf:field>
       <bcf:field>eventendsecond</bcf:field>
       <bcf:field>eventendtimezone</bcf:field>
       <bcf:field>eventendyear</bcf:field>
+      <bcf:field>eventendyeardivision</bcf:field>
       <bcf:field>eventhour</bcf:field>
       <bcf:field>eventminute</bcf:field>
       <bcf:field>eventmonth</bcf:field>
-      <bcf:field>eventseason</bcf:field>
       <bcf:field>eventsecond</bcf:field>
       <bcf:field>eventtimezone</bcf:field>
       <bcf:field>eventyear</bcf:field>
+      <bcf:field>eventyeardivision</bcf:field>
       <bcf:field>eventtitle</bcf:field>
       <bcf:field>eventtitleaddon</bcf:field>
       <bcf:field>isbn</bcf:field>
@@ -1953,17 +1958,17 @@
       <bcf:field>eventendhour</bcf:field>
       <bcf:field>eventendminute</bcf:field>
       <bcf:field>eventendmonth</bcf:field>
-      <bcf:field>eventendseason</bcf:field>
       <bcf:field>eventendsecond</bcf:field>
       <bcf:field>eventendtimezone</bcf:field>
       <bcf:field>eventendyear</bcf:field>
+      <bcf:field>eventendyeardivision</bcf:field>
       <bcf:field>eventhour</bcf:field>
       <bcf:field>eventminute</bcf:field>
       <bcf:field>eventmonth</bcf:field>
-      <bcf:field>eventseason</bcf:field>
       <bcf:field>eventsecond</bcf:field>
       <bcf:field>eventtimezone</bcf:field>
       <bcf:field>eventyear</bcf:field>
+      <bcf:field>eventyeardivision</bcf:field>
       <bcf:field>eventtitle</bcf:field>
       <bcf:field>eventtitleaddon</bcf:field>
       <bcf:field>isbn</bcf:field>
@@ -2004,17 +2009,17 @@
       <bcf:field>eventendhour</bcf:field>
       <bcf:field>eventendminute</bcf:field>
       <bcf:field>eventendmonth</bcf:field>
-      <bcf:field>eventendseason</bcf:field>
       <bcf:field>eventendsecond</bcf:field>
       <bcf:field>eventendtimezone</bcf:field>
       <bcf:field>eventendyear</bcf:field>
+      <bcf:field>eventendyeardivision</bcf:field>
       <bcf:field>eventhour</bcf:field>
       <bcf:field>eventminute</bcf:field>
       <bcf:field>eventmonth</bcf:field>
-      <bcf:field>eventseason</bcf:field>
       <bcf:field>eventsecond</bcf:field>
       <bcf:field>eventtimezone</bcf:field>
       <bcf:field>eventyear</bcf:field>
+      <bcf:field>eventyeardivision</bcf:field>
       <bcf:field>eventtitle</bcf:field>
       <bcf:field>eventtitleaddon</bcf:field>
       <bcf:field>isbn</bcf:field>
@@ -2086,17 +2091,17 @@
       <bcf:field>eventendhour</bcf:field>
       <bcf:field>eventendminute</bcf:field>
       <bcf:field>eventendmonth</bcf:field>
-      <bcf:field>eventendseason</bcf:field>
       <bcf:field>eventendsecond</bcf:field>
       <bcf:field>eventendtimezone</bcf:field>
       <bcf:field>eventendyear</bcf:field>
+      <bcf:field>eventendyeardivision</bcf:field>
       <bcf:field>eventhour</bcf:field>
       <bcf:field>eventminute</bcf:field>
       <bcf:field>eventmonth</bcf:field>
-      <bcf:field>eventseason</bcf:field>
       <bcf:field>eventsecond</bcf:field>
       <bcf:field>eventtimezone</bcf:field>
       <bcf:field>eventyear</bcf:field>
+      <bcf:field>eventyeardivision</bcf:field>
       <bcf:field>eventtitle</bcf:field>
       <bcf:field>eventtitleaddon</bcf:field>
       <bcf:field>howpublished</bcf:field>
@@ -2368,76 +2373,76 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">../References/library.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">Dornbusch:1976</bcf:citekey>
-    <bcf:citekey order="2">GrilliRoubini:1995</bcf:citekey>
-    <bcf:citekey order="3">Zettelmeyer:2004</bcf:citekey>
-    <bcf:citekey order="4">ABDV:2003</bcf:citekey>
-    <bcf:citekey order="4">KearnsManners:2006</bcf:citekey>
-    <bcf:citekey order="4">FRWW:2007</bcf:citekey>
-    <bcf:citekey order="5">Wright:2012</bcf:citekey>
-    <bcf:citekey order="5">FerrariKearnsSchrimpf:2021</bcf:citekey>
-    <bcf:citekey order="6">Rosa:2011JBF</bcf:citekey>
-    <bcf:citekey order="6">FerrariKearnsSchrimpf:2021</bcf:citekey>
-    <bcf:citekey order="7">Aktasetal:2009</bcf:citekey>
-    <bcf:citekey order="7">Duranetal:2012</bcf:citekey>
-    <bcf:citekey order="7">PenningsRamayandiTang:2015</bcf:citekey>
-    <bcf:citekey order="8">Kohlscheen:2014</bcf:citekey>
-    <bcf:citekey order="9">FerrariKearnsSchrimpf:2021</bcf:citekey>
-    <bcf:citekey order="10">HausmanWongswan:2011</bcf:citekey>
-    <bcf:citekey order="10">KearnsSchrimpfXia:2018</bcf:citekey>
-    <bcf:citekey order="11">KearnsManners:2006</bcf:citekey>
-    <bcf:citekey order="11">PenningsRamayandiTang:2015</bcf:citekey>
-    <bcf:citekey order="12">GurkaynakWright:2013</bcf:citekey>
-    <bcf:citekey order="12">NakamuraSteinsson:2018JEP</bcf:citekey>
-    <bcf:citekey order="13">Kohlscheen:2014</bcf:citekey>
-    <bcf:citekey order="14">Wright:2012</bcf:citekey>
-    <bcf:citekey order="14">FerrariKearnsSchrimpf:2021</bcf:citekey>
-    <bcf:citekey order="15">Boundetal:1994</bcf:citekey>
-    <bcf:citekey order="16">PenningsRamayandiTang:2015</bcf:citekey>
-    <bcf:citekey order="17">DePooter_etal:2014</bcf:citekey>
-    <bcf:citekey order="18">Solis:2F</bcf:citekey>
-    <bcf:citekey order="19">PiazzesiSwanson:2008</bcf:citekey>
-    <bcf:citekey order="19">GVRFSM:2019</bcf:citekey>
-    <bcf:citekey order="20">PiazzesiSwanson:2008</bcf:citekey>
-    <bcf:citekey order="21">GVRFSM:2019</bcf:citekey>
-    <bcf:citekey order="22">Kohlscheen:2014</bcf:citekey>
-    <bcf:citekey order="23">NakamuraSteinsson:2018JEP</bcf:citekey>
-    <bcf:citekey order="24">Kuttner:2001</bcf:citekey>
-    <bcf:citekey order="25">Rosa:2011JBF</bcf:citekey>
-    <bcf:citekey order="26">Wright:2012</bcf:citekey>
-    <bcf:citekey order="26">FerrariKearnsSchrimpf:2021</bcf:citekey>
-    <bcf:citekey order="27">Kohlscheen:2014</bcf:citekey>
-    <bcf:citekey order="28">Kohlscheen:2014</bcf:citekey>
-    <bcf:citekey order="29">Rosa:2011JBF</bcf:citekey>
-    <bcf:citekey order="29">FerrariKearnsSchrimpf:2021</bcf:citekey>
-    <bcf:citekey order="30">Kohlscheen:2014</bcf:citekey>
-    <bcf:citekey order="31">Rosa:2011JBF</bcf:citekey>
-    <bcf:citekey order="31">Wright:2012</bcf:citekey>
-    <bcf:citekey order="31">FerrariKearnsSchrimpf:2021</bcf:citekey>
-    <bcf:citekey order="32">Rey:2013</bcf:citekey>
-    <bcf:citekey order="33">Boundetal:1994</bcf:citekey>
-    <bcf:citekey order="34">PenningsRamayandiTang:2015</bcf:citekey>
-    <bcf:citekey order="35">ABDV:2003</bcf:citekey>
-    <bcf:citekey order="35">FRWW:2007</bcf:citekey>
-    <bcf:citekey order="36">Kuttner:2001</bcf:citekey>
-    <bcf:citekey order="36">GSS:2005a</bcf:citekey>
-    <bcf:citekey order="37">GSS:2005a</bcf:citekey>
-    <bcf:citekey order="38">DePooter_etal:2014</bcf:citekey>
-    <bcf:citekey order="39">HansonStein:2015</bcf:citekey>
-    <bcf:citekey order="40">CEE:1999</bcf:citekey>
-    <bcf:citekey order="41">KimLim:2016</bcf:citekey>
-    <bcf:citekey order="42">BZP:2001</bcf:citekey>
-    <bcf:citekey order="42">Rosa:2011Eco</bcf:citekey>
-    <bcf:citekey order="42">HausmanWongswan:2011</bcf:citekey>
-    <bcf:citekey order="42">KearnsSchrimpfXia:2018</bcf:citekey>
-    <bcf:citekey order="43">HernandezVega:2021</bcf:citekey>
-    <bcf:citekey order="44">DePooter_etal:2014</bcf:citekey>
-    <bcf:citekey order="45">Kohlscheen:2014</bcf:citekey>
-    <bcf:citekey order="46">CalvoReinhart:2002</bcf:citekey>
-    <bcf:citekey order="47">SidaouiRF:2008</bcf:citekey>
-    <bcf:citekey order="48">Lloyd:2018a</bcf:citekey>
-    <bcf:citekey order="49">Kuttner:2001</bcf:citekey>
-    <bcf:citekey order="50">Pischke:2007</bcf:citekey>
+    <bcf:citekey order="1" intorder="1">Dornbusch:1976</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">GrilliRoubini:1995</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">Zettelmeyer:2004</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">ABDV:2003</bcf:citekey>
+    <bcf:citekey order="4" intorder="2">KearnsManners:2006</bcf:citekey>
+    <bcf:citekey order="4" intorder="3">FRWW:2007</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">Wright:2012</bcf:citekey>
+    <bcf:citekey order="5" intorder="2">FerrariKearnsSchrimpf:2021</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">Rosa:2011JBF</bcf:citekey>
+    <bcf:citekey order="6" intorder="2">FerrariKearnsSchrimpf:2021</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">Aktasetal:2009</bcf:citekey>
+    <bcf:citekey order="7" intorder="2">Duranetal:2012</bcf:citekey>
+    <bcf:citekey order="7" intorder="3">PenningsRamayandiTang:2015</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">Kohlscheen:2014</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">FerrariKearnsSchrimpf:2021</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">HausmanWongswan:2011</bcf:citekey>
+    <bcf:citekey order="10" intorder="2">KearnsSchrimpfXia:2018</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">KearnsManners:2006</bcf:citekey>
+    <bcf:citekey order="11" intorder="2">PenningsRamayandiTang:2015</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">GurkaynakWright:2013</bcf:citekey>
+    <bcf:citekey order="12" intorder="2">NakamuraSteinsson:2018JEP</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">Kohlscheen:2014</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">Wright:2012</bcf:citekey>
+    <bcf:citekey order="14" intorder="2">FerrariKearnsSchrimpf:2021</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">Boundetal:1994</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">PenningsRamayandiTang:2015</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">DePooter_etal:2014</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">Solis:2F</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">PiazzesiSwanson:2008</bcf:citekey>
+    <bcf:citekey order="19" intorder="2">GVRFSM:2019</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">PiazzesiSwanson:2008</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">GVRFSM:2019</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">Kohlscheen:2014</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">NakamuraSteinsson:2018JEP</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">Kuttner:2001</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">Rosa:2011JBF</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">Wright:2012</bcf:citekey>
+    <bcf:citekey order="26" intorder="2">FerrariKearnsSchrimpf:2021</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">Kohlscheen:2014</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">Kohlscheen:2014</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">Rosa:2011JBF</bcf:citekey>
+    <bcf:citekey order="29" intorder="2">FerrariKearnsSchrimpf:2021</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">Kohlscheen:2014</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">Rosa:2011JBF</bcf:citekey>
+    <bcf:citekey order="31" intorder="2">Wright:2012</bcf:citekey>
+    <bcf:citekey order="31" intorder="3">FerrariKearnsSchrimpf:2021</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">Rey:2013</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">Boundetal:1994</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">PenningsRamayandiTang:2015</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">ABDV:2003</bcf:citekey>
+    <bcf:citekey order="35" intorder="2">FRWW:2007</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">Kuttner:2001</bcf:citekey>
+    <bcf:citekey order="36" intorder="2">GSS:2005a</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">GSS:2005a</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">DePooter_etal:2014</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">HansonStein:2015</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">CEE:1999</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">KimLim:2016</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">BZP:2001</bcf:citekey>
+    <bcf:citekey order="42" intorder="2">Rosa:2011Eco</bcf:citekey>
+    <bcf:citekey order="42" intorder="3">HausmanWongswan:2011</bcf:citekey>
+    <bcf:citekey order="42" intorder="4">KearnsSchrimpfXia:2018</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">HernandezVega:2021</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">DePooter_etal:2014</bcf:citekey>
+    <bcf:citekey order="45" intorder="1">Kohlscheen:2014</bcf:citekey>
+    <bcf:citekey order="46" intorder="1">CalvoReinhart:2002</bcf:citekey>
+    <bcf:citekey order="47" intorder="1">SidaouiRF:2008</bcf:citekey>
+    <bcf:citekey order="48" intorder="1">Lloyd:2018a</bcf:citekey>
+    <bcf:citekey order="49" intorder="1">Kuttner:2001</bcf:citekey>
+    <bcf:citekey order="50" intorder="1">Pischke:2007</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

@@ -1,11 +1,421 @@
-%---------------------------------------------------------------
-% Preamble
-%---------------------------------------------------------------
 \documentclass[a4paper,12pt]{article} 		% Document class
-\input{../Settings/packages}		   		  	  % Packages
-\input{../Settings/page_settings}   			% Page settings
-\input{../Settings/macros_global}			   % Personalized commands
-\input{../Settings/macros_local}			    % Personalized commands
+
+%---------------------------------------------------------------
+% Conditionals
+%---------------------------------------------------------------
+\usepackage{etoolbox}
+\newtoggle{toclinks}				    % Add links in sections to ToC
+\newtoggle{cboxes}					    % Comments for sections
+\newtoggle{fulldraft}					% Versions: outline vs full draft
+\newtoggle{revised}					 	% Highlight changes in revised version
+
+\settoggle{toclinks}{false}			   	% 'true' to include ToC and links
+\settoggle{cboxes}{false}				% 'true' to include boxed comments
+\settoggle{fulldraft}{true}	   	 	 	% 'false' to generate an outline
+\settoggle{revised}{false}	   	 	 	% 'true' to highlight changes with color
+
+%---------------------------------------------------------------
+% Contents
+%---------------------------------------------------------------
+\usepackage[nottoc]{tocbibind} 		 % Displays bib in ToC, nottoc omits ToC from itself
+\usepackage{textcomp}		  			% For the copyright symbol
+\usepackage{endnotes}					% Places footnotes at the end
+\let\footnote=\endnote
+
+%---------------------------------------------------------------
+% Layout
+%---------------------------------------------------------------
+\usepackage{pdfpages}
+\usepackage{pdflscape}			  		% To rotate page in PDF using \begin{landscape}
+\usepackage{rotating}					  % To rotate page in PDF using \begin{sidewaystable}
+
+%---------------------------------------------------------------
+% Formatting
+%---------------------------------------------------------------
+\usepackage{float}							% Placing inputs in current section
+\usepackage{enumerate}				   % Personalizes the enumerate style
+\usepackage{sectsty}
+\subsectionfont{\bfseries\itshape}
+\subsubsectionfont{\bfseries\itshape}
+\usepackage{titlesec}
+
+%---------------------------------------------------------------
+% Math
+%---------------------------------------------------------------
+\usepackage{amsmath} 						% For command eqref
+\usepackage{amssymb} 						% For math fonts
+\usepackage{dsfont}								% More math fonts (e.g. indicator function)
+
+%---------------------------------------------------------------
+% Figures and Tables
+%---------------------------------------------------------------
+\usepackage{standalone}			  % To compile sub-files as part of main document
+\usepackage{afterpage}				% Places float one page after it is mentioned
+\usepackage[labelsep=period,labelfont=bf]{caption} % Dot separator, boldfaced
+
+% Figures
+\usepackage{graphicx} 				% Needed for \includegraphics
+\usepackage[outdir=./]{epstopdf}  % Avoids errors when calling figures
+\usepackage{subcaption}	    	  % Multi-panel figure: \begin{subfigure}[t]{\textwidth}
+
+% Tables (extensions to the standard tabular environment)
+\usepackage{booktabs}			  % Needed for \toprule, \midrule, \bottomrule
+\usepackage{tabularx}				% Creates paragraph-like columns
+\usepackage{threeparttable}		 % Includes a structured note section
+\usepackage{longtable} 			   % For multi-page tables, note section needs package threeparttablex
+\usepackage{multirow}			   % To add entries with multiple rows
+\usepackage{bigstrut} 			 	 % Needed for \bigstrut
+\usepackage{siunitx}				 % To align the decimal points
+
+%---------------------------------------------------------------
+% Hyperlinks
+%---------------------------------------------------------------
+\usepackage[colorlinks=true]{hyperref} 	% Creates hyperlinks, 'true' gets rid of awful boxes
+\usepackage{xcolor}
+\definecolor{c1}{rgb}{0,0,1} 				  % Blue
+\definecolor{c2}{rgb}{0,0.3,0.9} 			% Light blue
+\definecolor{c3}{rgb}{0.3,0,0.9} 			% Red blue
+\hypersetup{
+	linkcolor={black}, 								% Internal links
+	citecolor={black}, 								% Citations
+	urlcolor={black} 									 % External links/urls
+}
+
+%---------------------------------------------------------------
+% Special Characters
+%---------------------------------------------------------------
+\usepackage[utf8]{inputenc}			  			% Handles accented characters (declare a character set to guarantee the same output on all systems)
+%\usepackage{underscore}				   			 % Control the behaviour of "_" in the text
+%\usepackage[T1]{fontenc}		  	  			% Fonts to use for printing characters
+
+%---------------------------------------------------------------
+% References
+%---------------------------------------------------------------
+\usepackage[style=ext-authoryear,maxbibnames=99,maxcitenames=3,uniquelist=false,uniquename=false,dashed=false,backend=biber]{biblatex} %Imports biblatex package
+\usepackage[style=american]{csquotes}
+\usepackage{xpatch}
+
+% Citations separated by a comma
+\renewcommand\multicitedelim{\addcomma\space}
+
+% Comma or dot after author
+\xpretobibmacro{date+extradate}{%
+	\ifentrytype{incollection}{
+		\setunit{\addcomma\space}%
+	}{
+		\setunit{\addperiod\space}%
+	}
+}{}{}
+
+% No pp. before pages
+\DeclareFieldFormat[article]{pages}{#1}
+\DeclareFieldFormat[report]{pages}{#1}
+
+% Remove dot after year
+\DeclareDelimFormat[bib]{nametitledelim}{\addspace}
+
+% Title in quotations and type not in italics
+\DeclareFieldFormat[report]{title}{\mkbibquote{#1\isdot}}
+
+% Omit fields for article
+\AtEveryBibitem{%
+	\ifentrytype{article}{
+		\clearfield{url}%
+		\clearfield{urldate}%
+		\clearfield{review}%
+		\clearfield{month}%%
+	}{}
+}
+
+% Comma after first author name
+\AtBeginBibliography{%
+	\renewcommand*{\finalnamedelim}{%
+		\ifentrytype{incollection}{%
+			\ifnumgreater{\value{liststop}}{2}{\finalandcomma}{}
+			\addspace\bibstring{and}\space
+		}{
+			\finalandcomma
+			\addspace\bibstring{and}\space
+		}
+	}%
+}
+
+% No in: before journal or report title, and custom for others
+\renewbibmacro{in:}{%
+	\ifboolexpr{%
+		test {\ifentrytype{article}}%
+		or
+		test {\ifentrytype{report}}%
+	}{}
+	{\printtext{\bibstring{in}\space}%
+		\printunit{\space}%
+	}%
+}
+
+% Patch the drivers for incollection
+\DefineBibliographyStrings{english}{byeditor = {edited by}}
+
+% Add bibliography database
+\addbibresource{../References/library.bib} 	%Import bibliography file from local copy of database 
+
+%---------------------------------------------------------------
+% Appendix
+%---------------------------------------------------------------
+\usepackage[title]{appendix}			% options: [titletoc,title,page,toc]
+\renewcommand*\appendixtocname{Appendix}
+\renewcommand{\appendixname}{APPENDIX}
+
+%---------------------------------------------------------------
+% Page Settings
+%---------------------------------------------------------------
+\usepackage[margin=1in]{geometry} 					% Sets the margins of the file
+\usepackage{fancyhdr} 						% Needed for head and foot options
+\usepackage{setspace}
+\doublespacing
+\AtBeginDocument{								 % Avoids excesive spacing b/w floating objects
+	\addtolength\abovedisplayskip{-0.2\baselineskip}
+	\addtolength\belowdisplayskip{-0.2\baselineskip}
+}
+\newcommand{\sectitlespace}{\vspace{0.1in}}
+\sloppy 								 			% Try to avoid hyphens
+\makeatletter
+\def\@fnsymbol#1{\ensuremath{\ifcase#1\or \dagger\or *\or
+		\mathsection\or \mathparagraph\or \|\or **\or \dagger\dagger
+		\or \ddagger\ddagger \else\@ctrerr\fi}}
+\makeatother
+
+%---------------------------------------------------------------
+% Table of Contents
+%---------------------------------------------------------------
+
+% Link to ToC from section
+\newcommand{\gototoc}{\vspace{-2cm} \null\hfill [\hyperlink{toc}{Go2ToC}] \newline}
+
+% Link back to section from ToC
+\newcommand{\maketoc}{
+	\hypertarget{toc}{}
+	\newpage
+	\tableofcontents
+	\vspace{2.5\bigskipamount} }
+
+% Box with bullets for tasks to do in a section
+\newenvironment{boxeditems}
+{\begin{tabular}{|p{\linewidth}|}
+		\hline
+		\begin{itemize}
+		}
+		{
+		\end{itemize}
+		\\ \hline
+	\end{tabular} \\
+}
+
+%---------------------------------------------------------------
+% Subcaptions
+%---------------------------------------------------------------
+
+% Notes after figures following Jörg Weber
+\newcommand{\figtext}[1]{
+	\vspace{-1ex}
+	\captionsetup{justification=justified,font=footnotesize}
+	\caption*{#1}
+}
+
+\newcommand{\fignote}[1]{\figtext{\emph{Note:~}~#1}}
+\newcommand{\fignotes}[1]{\figtext{\emph{Notes:~}~#1}}
+
+% Notes after tables
+\newcommand{\tabnote}[1]{
+	\begin{tablenotes}[para,flushleft]
+		\footnotesize \emph{Notes:~}~#1
+	\end{tablenotes}
+}
+
+%---------------------------------------------------------------
+% Track Changes
+%---------------------------------------------------------------
+
+% Highlight changes in revised version with color
+\newcommand{\textchange}[1]{\iftoggle{revised}{\textcolor{blue}{#1}}{#1}}
+
+%---------------------------------------------------------------
+% Footnotes
+%---------------------------------------------------------------
+
+% Change the look of foonote indicators
+\makeatletter
+\let \@makefntextorig \@makefntext
+\newcommand{\@makefntextcustom}[1]{%
+	\thefootnote.\enskip #1%
+}
+\renewcommand{\@makefntext}[1]{\@makefntextcustom{#1}}
+\makeatother
+
+% Change the look of endnote indicators
+\renewcommand{\makeenmark}{\hbox{$^{\theenmark}$}}
+\makeatletter
+\def\enoteformat{%
+	\rightskip\z@ \leftskip\z@ \parindent=1.8em
+	\leavevmode{\setbox\z@=\lastbox}\llap{\theenmark.\enskip}%
+}
+\makeatother
+
+%---------------------------------------------------------------
+% Variable Definitions
+%---------------------------------------------------------------
+\providecommand{\tiie}{TIIE28D}
+\providecommand{\lastobs}{December 2021}
+\providecommand{\lastobsfx}{November 2021}
+\providecommand{\lastobsflwbdm}{December 2021}
+\providecommand{\lastobsflwtic}{August 2021}
+\providecommand{\idxt}{t}
+\providecommand{\idxh}{h}
+\providecommand{\idxi}{i}
+\providecommand{\idxsfwd}{\idxt+\idxh}
+\providecommand{\idxslag}{\idxt-1}
+\providecommand{\yld}{y}
+\providecommand{\ctrls}{z}
+\providecommand{\hld}{H}
+\providecommand{\depvar}{\Delta \yld_{\idxt}}
+\providecommand{\mps}{\Delta x_{\idxt}}
+\providecommand{\depvarclean}{\depvar^{*}}
+\providecommand{\mpsclean}{\mps^{*}}
+\providecommand{\paramB}{\beta}
+\providecommand{\intrcpt}{\paramB_{0}}
+\providecommand{\slopetrgt}{\paramB_{1}}
+\providecommand{\slopepath}{\paramB_{2}}
+\providecommand{\assets}{X}
+\providecommand{\factors}{F}
+\providecommand{\loadings}{\Lambda}
+\providecommand{\rotated}{Z}
+\providecommand{\rmatrix}{U}
+\providecommand{\rtdone}{\rotated_{1}}
+\providecommand{\rtdtwo}{\rotated_{2}}
+\providecommand{\rtdonereg}{Target_{\idxt}}
+\providecommand{\rtdtworeg}{Path_{\idxt}}
+\providecommand{\lagidx}{j}
+\providecommand{\lagorder}{p}
+\providecommand{\lagparam}{\gamma}   %\alpha
+\providecommand{\lagoper}{L}
+\providecommand{\depvarflw}{\Delta \hld_{\idxt}}
+\providecommand{\flows}{w_{\idxt}}
+\providecommand{\flowslag}{w_{\idxt - \lagidx}}
+\providecommand{\lagsum}{\sum_{\lagidx = 1}^{\lagorder} \lagparam_{\lagidx} \flowslag}
+\providecommand{\lagsumh}{\sum_{\lagidx = 1}^{\lagorder} \lagparam^{\lagidx}_\idxh \flowslag}
+\providecommand{\dimobs}{T}
+\providecommand{\dimassets}{n}
+\providecommand{\dimfactors}{k}
+\providecommand{\dimnull}{\dimfactors_{0}}
+\providecommand{\dimsassets}{\dimobs \times \dimassets}
+\providecommand{\dimsfactors}{\dimobs \times \dimfactors}
+\providecommand{\dimsloadings}{\dimfactors \times \dimassets}
+\providecommand{\errorreg}{\varepsilon_{\idxt}}
+\providecommand{\errorfac}{\zeta}
+\providecommand{\errorflows}{\nu_{\idxt}}
+\providecommand{\Rsqrt}{R^{2}}
+
+\providecommand{\dpv}{y}
+\providecommand{\idv}{x}
+\providecommand{\omv}{\omega}
+\providecommand{\dpvstar}{\dpv^{*}}
+\providecommand{\idvstar}{\idv^{*}}
+\providecommand{\jobs}{Jobs}
+\providecommand{\errortrue}{\varepsilon}
+\providecommand{\errormix}{\tau}
+\providecommand{\melhs}{\nu}
+\providecommand{\merhs}{u}
+\providecommand{\mean}{\mu}
+\providecommand{\covar}{\sigma}
+\providecommand{\corr}{\rho}
+\providecommand{\var}{\covar^{2}}
+\providecommand{\meanE}{\mean_{\errortrue}}
+\providecommand{\meanU}{\mean_{\merhs}}
+\providecommand{\meanV}{\mean_{\melhs}}
+\providecommand{\varE}{\var_{\errortrue}}
+\providecommand{\varU}{\var_{\merhs}}
+\providecommand{\varV}{\var_{\melhs}}
+\providecommand{\varX}{\var_{\idv}}
+\providecommand{\varXstar}{\var_{\idvstar}}
+\providecommand{\covarEX}{\covar_{\errortrue \idvstar}}
+\providecommand{\covarUE}{\covar_{\merhs \errortrue}}
+\providecommand{\covarVE}{\covar_{\melhs \errortrue}}
+\providecommand{\covarUX}{\covar_{\merhs \idvstar}}
+\providecommand{\covarUY}{\covar_{\merhs \dpvstar}}
+\providecommand{\covarVX}{\covar_{\melhs \idvstar}}
+\providecommand{\covarVY}{\covar_{\melhs \dpvstar}}
+\providecommand{\covarUV}{\covar_{\merhs \melhs}}
+\providecommand{\covarWXe}{\covar_{\omv \idv}}
+\providecommand{\covarVXe}{\covar_{\melhs \idv}}
+\providecommand{\corrUV}{\corr_{\merhs \melhs}}
+\providecommand{\corrUX}{\corr_{\merhs \idvstar}}
+\providecommand{\corrUY}{\corr_{\merhs \dpvstar}}
+\providecommand{\corrVX}{\corr_{\melhs \idvstar}}
+\providecommand{\corrVY}{\corr_{\melhs \dpvstar}}
+\providecommand{\paramG}{\gamma}
+\providecommand{\estimB}{\hat{\paramB}}
+\providecommand{\paramSE}{\varE}
+\providecommand{\estimSE}{\hat{\paramSE}}
+\providecommand{\paramAVB}{s}
+\providecommand{\estimAVB}{\hat{\paramAVB}}
+\providecommand{\attnfactor}{\lambda}
+\providecommand{\plim}{\mathrm{plim}}
+
+\providecommand{\reg}{\delta}
+\providecommand{\regVonX}{\reg_{\melhs \idv}}
+\providecommand{\regWonX}{\reg_{\omv \idv}}
+\providecommand{\regWonXstar}{\reg_{\omv \idvstar}}
+
+%---------------------------------------------------------------
+% Equations
+%---------------------------------------------------------------
+\newcommand{\eqOneFac}{\depvar = \intrcpt + \slopetrgt \mps + \errorreg}
+\newcommand{\eqOneFacOV}{\depvar = \intrcpt + \slopetrgt PRS_{\idxt} + \paramB_{2} \Delta VIX_{\idxt} + \paramB_{3} \Delta USY_{\idxt} + \paramB_{4} WTI_{\idxt} + \paramB_{5} \jobs_{\idxt} + \errorreg}
+\newcommand{\eqTwoFacP}{\depvar = \intrcpt + \slopetrgt \rtdonereg + \slopepath \rtdtworeg + \errorreg}
+\newcommand{\eqTwoFacF}{\depvarflw = \intrcpt + \slopetrgt \rtdonereg + \slopepath \rtdtworeg + \errorreg}
+\newcommand{\eqPCA}{\assets = \factors \loadings + \errorfac}
+\newcommand{\eqRotation}{\rotated = \factors \, \rmatrix}
+\newcommand{\eqFlows}{\flows = \intrcpt + \slopetrgt \rtdonereg + \slopepath \rtdtworeg + \lagsum + \eta^{'} \ctrls_{\idxslag} + \errorflows}
+\newcommand{\eqAsym}{\yld_{\idxt} = \intrcpt + \paramB_{1} \rtdonereg \mathds{1} \left(\rtdonereg > 0 \right) + \paramB_{2} \rtdonereg \mathds{1} \left(\rtdonereg < 0 \right) \\ + \paramB_{3} \rtdtworeg \mathds{1} \left(\rtdtworeg > 0 \right) + \paramB_{4} \rtdtworeg \mathds{1} \left(\rtdtworeg < 0 \right) + \errorreg}
+
+\newcommand{\eqDGP}{\dpvstar &= \paramB \idvstar + \errortrue}
+\newcommand{\eqDGPme}{\dpv = \paramB \idv + \errormix = \paramB \idv + \eqErrormix}
+\newcommand{\eqDGPov}{\dpvstar = \paramB \idvstar + \paramG \omv +  \errortrue}
+\newcommand{\eqMEdpv}{\dpv &= \dpvstar + \melhs}
+\newcommand{\eqMEidv}{\idv &= \idvstar + \merhs}
+\newcommand{\eqAtten}{\attnfactor = \frac{\varXstar}{\varXstar + \varU}}
+\newcommand{\eqAttenInLine}{\attnfactor = \varXstar / \left(\varXstar + \varU\right) }
+\newcommand{\eqErrormix}{\errortrue - \paramB \merhs + \melhs}
+
+\newcommand{\eqPlimBstd}{\plim \left( \estimB \right) = \frac{cov(\idv, \dpvstar)}{var(\idv)} = \frac{cov(\idvstar + \merhs, \paramB \idvstar + \errortrue)}{var(\idvstar + \merhs)} = \paramB \frac{\varXstar}{\varXstar + \varU} = \paramB \attnfactor}
+\newcommand{\eqPlimBstdshort}{\plim (\estimB) = \paramB \attnfactor}
+
+\newcommand{\eqPlimSstd}{\plim \left( \estimAVB \right) = \attnfactor \paramAVB + \attnfactor(1 - \attnfactor) \paramB^{2}}
+
+\newcommand{\eqPlimBnew}{\plim \left( \estimB \right) 
+	= \frac{cov(\idv, \dpv)}{var(\idv)} 
+	= \frac{cov(\idvstar + \merhs, \paramB \idvstar + \paramG \omv + \errortrue)}{var(\idvstar + \merhs)} 
+	= \frac{\paramB \varXstar + \paramG \covarWXe}{\varXstar + \varU}  }
+
+\newcommand{\eqPlimBbias}{\plim \left( \estimB \right)
+	= \paramB \frac{\varXstar}{\varX} + \paramG \frac{\covarWXe}{\varX}
+	= \paramB \attnfactor + \paramG \regWonX}
+
+\providecommand{\errordepvar}{e_{y}}
+\providecommand{\errormps}{e_{x}}
+\newcommand{\eqMEdepvar}{\depvar &= \depvarclean + \errordepvar}
+\newcommand{\eqMEmps}{\mps &= \mpsclean + \errormps}
+
+\newcommand{\eqLPrhs}{\alpha_{\idxh} + \beta^{1}_{\idxh} \; \rtdonereg +  \beta^{2}_{\idxh} \; \rtdtworeg + \eta^{'}_{\idxh} \ctrls_{\idxslag}  + u_{\idxsfwd}}
+
+\newcommand{\eqLPprices}{\yld_{\idxsfwd} - \yld_{\idxslag} = \eqLPrhs} 
+
+\newcommand{\eqLPflows}{\hld_{\idxsfwd} - \hld_{\idxslag} = \eqLPrhs} 
+
+\newcommand{\eqLP}{\yld_{\idxsfwd} - \yld_{\idxslag} = \alpha_{\idxh} + \gamma_{\idxh} \mps + u_{\idxsfwd}} 
+
+%---------------------------------------------------------------
+% Additional Settings
+%---------------------------------------------------------------
 \tracinggroups=1
 \tracingrestores=1
 \tracingassigns=1
@@ -130,7 +540,9 @@ This section documents a statistically and economically significant response of 
 \subsection{Methodology}
 \sectitlespace
 The analysis of the response of the exchange rate and bond yields to policy rate surprises uses the following event-study regression:
-\input{../Equations/nOneFac}	
+\begin{equation} \label{eq:nOneFac}
+	\eqOneFac,
+\end{equation}	
 \noindent in which \(\depvar\) is the change in the variable of interest (exchange rate or bond yields) and \(\mps\) is the policy rate surprise (i.e. the change in the 3-month swap rate), both computed over the same window around monetary policy announcements. The error term \(\errorreg\) captures variations in the dependent variable unrelated to policy rate surprises.
 
 The parameter of interest in equation (\ref{eq:nOneFac}) is the slope coefficient \(\slopetrgt\), it measures the response of asset prices to policy rate surprises.\footnote{The intercept \(\intrcpt\) is generally dropped because asset prices are not expected to change when there is no surprise in the policy rate in small windows.} The classical assumption to identify \(\slopetrgt\) is that \(\errorreg\) is orthogonal to \(\mps\) or, equivalently, that \(\mps\) is exogenous. The frequency at which asset price changes are calculated is crucial to satisfy the exogeneity assumption. 
@@ -179,7 +591,9 @@ The major insight from comparing Tables \ref{tab:factorid} and \ref{tab:factordy
 \subsubsection{Persistence}
 \sectitlespace
 In addition to the initial reaction to the surprises, I assess the persistence of the response by estimating equation (\ref{eq:nOneFac}) but with the change in the dependent variable calculated days after an announcement. Specifically, I run the following local projections:
-\input{../Equations/nLP}
+\begin{equation} \label{eq:nLP}
+	\eqLP,
+\end{equation}
 \noindent in which \(\idxh\) indicates the horizon (in days) with \(\idxh = 0, 1, \ldots, 10\), and \(\mps\) represents the policy rate surprises identified using intraday data. The parameters of interest, \(\gamma_{\idxh}\), measure the average response of asset prices to policy rate surprises at horizon \(\idxh\). Responses are assessed relative to a one-basis-point increase (a tightening) in the policy rate. 
 
 \begin{center}
@@ -206,7 +620,6 @@ It is helpful to approach the puzzle from an errors-in-variables perspective. In
 Validation studies provide evidence on the magnitude of the measurement errors. In these studies, the `noisy' (daily) and `true' (intraday) values for the dependent and independent variables are observed, so the measurement errors (the difference between daily and intraday values) are also observed. In the data, the measurement error in the dependent variable is much larger than in the independent variable (see Table \ref{tab:cevassumptions} in the Appendix).\footnote{ In line with this, regressing daily on intraday changes gives an \(R^2\) of 0.94 for policy rate surprises and of 0.18 for exchange rate returns. Also, remember that the standard deviation of the exchange rate returns doubles when the frequency goes from intraday to daily, whereas that of the policy rate surprises remains essentially the same (see Table \ref{tab:prssumm}).} Intuitively, the measurement error in policy rate surprises is small because monetary policy decisions are the main event for swap rates during announcement days. Meanwhile, a lot of factors other than monetary policy decisions affect the exchange rate in emerging markets that even a daily frequency is not enough to avoid their influence.
 
 Table \ref{tab:factorfx} exploits the two lengths for the event window to shed light on the puzzle. It reports the estimation of equation (\ref{eq:nOneFac}) after combining the `true’ and `noisy’ versions of the dependent and independent variables. The `true’ (first two columns) and `noisy’ (last two columns) exchange rate returns are regressed on the `true’ (top row) and `noisy’ (bottom row) policy rate surprises. The first column of the Table is the ideal case in which there is no measurement error in neither of the variables, while the last column is the worst case since there is measurement error in both.\footnote{These two cases are the first columns of Tables \ref{tab:factorid} and \ref{tab:factordy}, but are reproduced here for ease of comparison.} In the remaining two cases, reported in the middle columns, only one of the variables is measured with error.
-%\input{../Tables/factorfx}
 \begin{center}
 	[Insert Table \ref{tab:factorfx} here.]
 \end{center}
@@ -239,10 +652,11 @@ U.S. labor market data are a good example of omitted variables for the daily ret
 Consider, for instance, the announcement on September 6, 2013, in which Banxico unexpectedly cut its policy rate by 25 basis points at 10 a.m. ET. According to the estimation results with intraday data, this would have depreciated the currency by around 55 basis points, but the peso actually \textit{appreciated} 168 basis points during the day.\footnote{ In the 30-minute window around the announcement, the peso appreciated only 15 basis points.} Earlier that day, at 8:30 a.m. ET, nonfarm payrolls data for the previous month were released. Job gains were less than expected according to survey forecasts (169,000 versus 180,000), which analysts interpreted as evidence that it would take the Fed longer than previously anticipated to remove the monetary stimulus it suggested earlier in the year in what is known as the taper tantrum. Asset prices in turn reacted as if there was a loosening surprise in the U.S. policy rate, depreciating the U.S. dollar (and appreciating the Mexican peso). 
 
 The following regression helps testing whether these variables indeed reduce the bias and standard error detected when the dependent variable is measured with error: 
-\input{../Equations/nOneFacOV}
+\begin{equation} \label{eq:nOneFacOV}
+	\eqOneFacOV ,
+\end{equation}
 in which the dependent variable is the daily exchange rate returns, \(PRS\) denotes the policy rate surprises (measured with and without error), \(\Delta VIX\) indicates the daily change in the VIX, \(\Delta USY\) refers to the daily change in the 2-year U.S. Treasury yield from the Federal Reserve's H.15 dataset,\footnote{Results using the 10- instead of the 2-year U.S. Treasury yield are similar.} \(WTI\) is the closing price of the oil benchmark, and \(\jobs\) is the surprise part in releases of U.S. labor market data. Surprises in initial jobless claims, nonfarm payrolls and in the unemployment rate are calculated as the difference between the released number and survey expectations from Money Market Services.\footnote{Data from Money Market Services is available from 2000 to 2018. When there is no U.S. labor market news on a day in which Banxico announces a monetary policy decision, \(\jobs_{\idxt}\) is set to zero.} Any of the three U.S. labor market surprises can be used, but only the effect of surprises in initial jobless claims (\(IJC \, Surprise\)) is statistically significant. Table \ref{tab:factorov_fx} reports the results. 
 The first two columns reproduce the last two columns of Table \ref{tab:factorfx} for ease of comparison, and the last two columns control for the potential omitted variables.\footnote{Since the intercept is not included for the regressions in Table \ref{tab:factorfx}, it is also excluded for the regressions in Table \ref{tab:factorov_fx} so that the results are comparable. The outcome is similar when the intercept is included.}
-%\input{../Tables/factorov_fx}		% \ref{tab:factorov_fx}
 \begin{center}
 	[Insert Table \ref{tab:factorov_fx} here.]
 \end{center}
@@ -343,9 +757,17 @@ Figure \ref{fig:persistprsyc} reports the persistence of the yield curve to poli
 
 Let's assume that the variables \(\dpvstar\) and \(\idvstar\) are unobserved, whereas \(\dpv\) and \(\idv\) are observed but measured with an additive error. For ease of exposition, let \(\dpvstar\) and \(\idvstar\) to have zero means. Also, let \(\mean_{i}\), \(\var_{i}\) and \(\covar_{ij}\) denote respectively the expected value and variance of variable \(i\), and the covariance between variables \(i\) and \(j\). 
 The model is as follows: 
-\input{../Equations/uME}
+\begin{equation*} \label{eq:uME}
+	\begin{aligned}
+		\eqDGP, \\
+		\eqMEidv, \\
+		\eqMEdpv,
+	\end{aligned}
+\end{equation*}
 \noindent in which the `true' error \(\errortrue\) is i.i.d. with zero mean, variance \(\varE\) and uncorrelated with \(\idvstar\), while the measurement errors \(\merhs\) and \(\melhs\) have zero means, variances \(\varU\) and \(\varV\), and are uncorrelated among themselves and with \(\errortrue\).\footnote{Alternatively, \(\meanE = \meanU = \meanV = \covarEX = \covarUV = \covarUE = \covarVE = 0\).} The estimated equation is thus:
-\input{../Equations/nDGPme}
+\begin{equation} \label{eq:nDGPme}
+	\eqDGPme.
+\end{equation}
 
 In the classical measurement error model, the least squares estimators \(\estimB\) and \(\estimSE\) are inconsistent when only the independent variable is measured with error (i.e., \(\varU > 0\), \(\varV = \covarUX = \covarUY = 0\)); the degree of inconsistency depends on an attenuation factor \(\attnfactor\) defined as \(\varXstar /\varX\), so \(0< \attnfactor < 1\).\footnote{ See \textcite{Pischke:2007} for a derivation of \(\eqPlimBstdshort\) and \(\eqPlimSstd\). When there is no measurement error in the independent variable, \(\attnfactor = 1\), in which case \(\estimB\) and \(\estimAVB\) are consistent.} Yet \(\estimB\) is consistent but with a larger standard error when only the dependent variable is measured with error (i.e., \(\varV > 0\), \(\varU = \covarVX = \covarVY = 0\)). 
 
@@ -364,7 +786,9 @@ Measurement error in the dependent variable can also cause bias if the error cap
 \[\eqDGPov,\]
 \noindent in which \(\omv\) is the omitted variable (i.e. \(\paramG \neq 0\)) and it is assumed to be uncorrelated with \(\errortrue\), \(\merhs\) and \(\melhs\). The estimated model is again that in equation (\ref{eq:nDGPme}), but in which \(\melhs = \paramG \omv\). The degree of inconsistency in \(\estimB\) is then:
 \[\eqPlimBnew\]
-\input{../Equations/nPlimBbias}
+\begin{equation} \label{eq:nPlimBbias}
+	\eqPlimBbias.
+\end{equation}
 
 This inconsistency in \(\estimB\) hence depends on the attenuation factor and a term related to the omitted variable, in which \(\regWonX\) is the slope coefficient from regressing \(\omv\) on \(\idv\).\footnote{If there is no measurement error in \(\idv\) (\(\varU = 0\)), \(\omv\) is regressed on \(\idvstar\) instead of \(\idv\).} The probability limit of \(\estimAVB\) also has an additional term related to \(\omv\). Therefore, there will be bias and imprecision in \(\estimB\) whenever measurement error in the dependent variable captures the effects of an omitted variable (\(\melhs = \paramG \omv\)), even without measurement error in the independent variable (\(\attnfactor = 1\)). The last two columns of table \ref{tab:factorfx} align with this result.
 

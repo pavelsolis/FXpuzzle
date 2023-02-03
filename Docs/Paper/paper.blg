@@ -1,15 +1,15 @@
-[0] Config.pm:311> INFO - This is Biber 2.16
-[0] Config.pm:314> INFO - Logfile is 'paper.blg'
-[49] biber-darwin:340> INFO - === Wed Feb  1, 2023, 19:47:02
-[61] Biber.pm:415> INFO - Reading 'paper.bcf'
-[132] Biber.pm:952> INFO - Found 35 citekeys in bib section 0
-[143] Biber.pm:4340> INFO - Processing section 0
-[151] Biber.pm:4531> INFO - Looking for bibtex format file '../References/library.bib' for section 0
-[177] bibtex.pm:1689> INFO - LaTeX decoding ...
-[537] bibtex.pm:1494> INFO - Found BibTeX data source '../References/library.bib'
-[715] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[715] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[715] Biber.pm:4168> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
-[715] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
-[740] bbl.pm:654> INFO - Writing 'paper.bbl' with encoding 'UTF-8'
-[756] bbl.pm:757> INFO - Output to paper.bbl
+[0] Config.pm:306> INFO - This is Biber 2.18
+[0] Config.pm:309> INFO - Logfile is 'paper.blg'
+[257] biber-MSWIN64:340> INFO - === 
+[309] Biber.pm:418> INFO - Reading 'paper.bcf'
+[453] Biber.pm:978> INFO - Found 35 citekeys in bib section 0
+[472] Biber.pm:4401> INFO - Processing section 0
+[486] Biber.pm:4592> INFO - Looking for bibtex file '../References/library.bib' for section 0
+[598] bibtex.pm:1713> INFO - LaTeX decoding ...
+[1215] bibtex.pm:1518> INFO - Found BibTeX data source '../References/library.bib'
+[1484] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1485] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1485] Biber.pm:4221> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[1485] Biber.pm:4227> INFO - No sort tailoring available for locale 'en-US'
+[1524] bbl.pm:654> INFO - Writing 'paper.bbl' with encoding 'UTF-8'
+[1554] bbl.pm:757> INFO - Output to paper.bbl
