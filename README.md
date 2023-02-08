@@ -19,10 +19,7 @@ README.md (this file)
 	- Analytic: analysis dataset
 - Docs folder with the following subfolders:
 	- Paper folder: files that make up the manuscript
-	- Equations folder: files for the equations
-	- Figures folder: files to generate the figures
-	- Tables folder: files to generate the tables
-	- Settings folder: files with settings for the paper
+	- Figures folder: files with the figures
 	- References folder: .bib file with cited references
 
 
@@ -45,4 +42,3 @@ Execute the codes.do file to replicate the results in the paper
 - The codes store the tables and figures in the respective folder
 
 Execute the paper.tex file to generate the PDF version of the manuscript
-- The file calls the necessary .tex files in the required order
