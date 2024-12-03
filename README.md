@@ -1,4 +1,4 @@
-# Does the Exchange Rate Respond to Monetary Policy in Mexico? Solving an Exchange Rate Puzzle in Emerging Markets
+# [Does the Exchange Rate Respond to Monetary Policy in Mexico? Solving an Exchange Rate Puzzle in Emerging Markets](https://onlinelibrary.wiley.com/doi/full/10.1111/jmcb.13032)
 
 by Pavel Solís (pavel.solis@gmail.com)
 
